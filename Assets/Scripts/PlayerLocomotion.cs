@@ -164,7 +164,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void HandleJumping()
     {
-        if (isGrounded)
+        if (isGrounded && !playerManager.isUsingRootMotion)
         {
             animatorManager.animator.SetBool("isJumping", true);
             animatorManager.PlayTargetAnimation("Jump", false);
@@ -185,5 +185,21 @@ public class PlayerLocomotion : MonoBehaviour
 
         animatorManager.PlayTargetAnimation("Dodge", true, true);
         //Toggle Invulnerable bool for no hp damage during animation
+    }
+
+    public void HandleRolling()
+    {
+        if (playerManager.isInteracting || !isGrounded)
+        {
+            return;
+        }
+
+        animatorManager.PlayTargetAnimation("Rolling", true, true);
+        moveDirection = cameraObject.forward * inputManager.verticalInput;
+        moveDirection += cameraObject.right * inputManager.horizontalInput;
+
+        moveDirection.y = 0;
+        Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
+        transform.rotation = rollRotation;
     }
 }

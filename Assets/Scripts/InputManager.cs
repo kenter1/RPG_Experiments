@@ -76,9 +76,6 @@ public class InputManager : MonoBehaviour
     {
         if (b_Input)
         {
-            verticalInput = movementInput.y;
-            horizontalInput = movementInput.x;
-
             if(Mathf.Abs(movementInput.y) > 0 || Mathf.Abs(movementInput.x) > 0)
             {
                 playerLocomotion.isSprinting = true;
@@ -109,7 +106,14 @@ public class InputManager : MonoBehaviour
         if (x_Input)
         {
             x_Input = false;
-            playerLocomotion.HandleDodge();
+            if (Mathf.Abs(movementInput.y) > 0 || Mathf.Abs(movementInput.x) > 0)
+            {
+                playerLocomotion.HandleRolling();
+            }
+            else
+            {
+                playerLocomotion.HandleDodge();
+            }
         }
     }
 }
