@@ -45,10 +45,15 @@ public class CameraManager : MonoBehaviour
 
     private void FollowTarget()
     {
-        Vector3 targetPosition = Vector3.SmoothDamp(
+        if (!inputManager.rb_Input || !inputManager.rt_Input)
+        {
+            Vector3 targetPosition = Vector3.SmoothDamp(
             transform.position, targetTransform.position, ref cameraFollowVelocity, cameraFollowSpeed);
 
-        transform.position = targetPosition;
+            transform.position = targetPosition;
+        }
+
+
     }
 
     private void RotateCamera()

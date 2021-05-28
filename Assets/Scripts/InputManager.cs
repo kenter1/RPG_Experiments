@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     private PlayerControls playerControls;
     private PlayerLocomotion playerLocomotion;
     private AnimatorManager animatorManager;
+    private PlayerAttacker playerAttacker;
+    private PlayerInventory playerInventory;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -22,10 +24,15 @@ public class InputManager : MonoBehaviour
     public bool jump_Input;
     public bool x_Input;
 
+    public bool rb_Input;
+    public bool rt_Input;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
+        playerAttacker = GetComponent<PlayerAttacker>();
+        playerInventory = GetComponent<PlayerInventory>();
     }
 
     private void OnEnable()
@@ -40,6 +47,10 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.B.canceled += i => b_Input = false;
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
             playerControls.PlayerActions.X.performed += i => x_Input = true;
+
+            playerControls.PlayerActions.RB.performed += i => rb_Input = true;
+            playerControls.PlayerActions.RT.performed += i => rt_Input = true;
+
 
         }
 
@@ -58,6 +69,7 @@ public class InputManager : MonoBehaviour
         HandleJumpingInput();
         HandleDodgeInput();
         //HandleActionInput()
+        HandleAttackInput();
     }
 
     private void HandleMovementInput()
@@ -76,7 +88,7 @@ public class InputManager : MonoBehaviour
     {
         if (b_Input)
         {
-            if(Mathf.Abs(movementInput.y) > 0 || Mathf.Abs(movementInput.x) > 0)
+            if(movementInput.magnitude > 0)
             {
                 playerLocomotion.isSprinting = true;
             }
@@ -115,5 +127,34 @@ public class InputManager : MonoBehaviour
                 playerLocomotion.HandleDodge();
             }
         }
+    }
+
+    private void HandleAttackInput()
+    {
+
+
+        if (rt_Input)
+        {
+            rt_Input = false;
+
+            playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+        }
+        else if (rb_Input)
+        {
+            print("Speed while running: " + movementInput.magnitude);
+            rb_Input = false;
+            if (movementInput.magnitude >= 1)
+            {
+                playerAttacker.HandleLightAttack(playerInventory.rightWeapon, true);
+            }
+            else
+            {
+                playerAttacker.HandleLightAttack(playerInventory.rightWeapon, false);
+            }
+            
+
+            
+        }
+
     }
 }
