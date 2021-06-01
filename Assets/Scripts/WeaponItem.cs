@@ -13,4 +13,6 @@ public class WeaponItem : Item
     public string OH_Light_Attack_1;
     public string OH_Heavy_Attack_1;
     public string OH_Run_Attack_01;
+    public string OH_Run_Attack_02;
+
 }

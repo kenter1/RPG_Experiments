@@ -6,17 +6,18 @@ public class PlayerAttacker : MonoBehaviour
 {
     AnimatorManager animatorHandler;
     PlayerManager playerManager;
+    PlayerLocomotion playerLocomotion;
 
     private void Awake()
     {
         animatorHandler = GetComponentInChildren<AnimatorManager>();
         playerManager = GetComponent<PlayerManager>();
-
+        playerLocomotion = GetComponent<PlayerLocomotion>();
     }
 
     public void HandleLightAttack(WeaponItem weapon, bool running = false)
     {
-        if (!playerManager.isInteracting)
+        if (!playerManager.isInteracting && playerLocomotion.isGrounded)
         {
 
 
@@ -35,12 +36,22 @@ public class PlayerAttacker : MonoBehaviour
 
     }
 
-    public void HandleHeavyAttack(WeaponItem weapon)
+    public void HandleHeavyAttack(WeaponItem weapon, bool running = false)
     {
-        if (!playerManager.isInteracting)
-        {
-            print("Playing Heavy Attack Animation: " + weapon.OH_Heavy_Attack_1);
-            animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_1, true);
+        if (!playerManager.isInteracting && playerLocomotion.isGrounded)
+        { 
+            if (running)
+            {
+                print("Playing Run Light Attack Animation: " + weapon.OH_Run_Attack_02);
+                animatorHandler.PlayTargetAnimation(weapon.OH_Run_Attack_02, true);
+
+            }
+            else
+            {
+                print("Playing Heavy Attack Animation: " + weapon.OH_Heavy_Attack_1);
+                animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_1, true);
+            }
+
         }
 
     }

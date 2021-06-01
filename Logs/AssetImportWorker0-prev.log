@@ -15,11 +15,11 @@ D:/Repository/GameDev/RPG_Experiments
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50366
+61477
 Successfully changed project path to: D:/Repository/GameDev/RPG_Experiments
 D:/Repository/GameDev/RPG_Experiments
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 26.13 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 28.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,645 +35,1374 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56968
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001981 seconds.
+Registered in 0.003133 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 26.87 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 29.54 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.023 seconds
+- Completed reload, in  1.304 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000699 seconds.
+Registered in 0.000729 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 28.86 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 38.58 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.899 seconds
+- Completed reload, in  1.115 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1419 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.5 MB.
-System memory in use after: 68.6 MB.
+Unloading 1425 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.8 MB.
+System memory in use after: 68.9 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1865.
-Total: 2.202500 ms (FindLiveObjects: 0.184900 ms CreateObjectMapping: 0.037700 ms MarkObjects: 1.898200 ms  DeleteObjects: 0.080100 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1871.
+Total: 3.222500 ms (FindLiveObjects: 0.352300 ms CreateObjectMapping: 0.084600 ms MarkObjects: 2.671100 ms  DeleteObjects: 0.112400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/CameraManager.cs
-  artifactKey: Guid(7763d4356f29d1c449a0638a03513c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/CameraManager.cs using Guid(7763d4356f29d1c449a0638a03513c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '472c8bce4a4a0f2cfc5ca261e87e8318') in 0.021881 seconds
-  Import took 0.023970 seconds .
+  path: Assets/Scripts/PlayerLocomotion.cs
+  artifactKey: Guid(d9afbb23d56c51742877c0c388be5436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerLocomotion.cs using Guid(d9afbb23d56c51742877c0c388be5436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3d85d413fc79026bbf2a3dcc8211984') in 0.037454 seconds
+  Import took 0.040835 seconds .
 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 40.3 MB.
-System memory in use after: 40.4 MB.
+System memory in use before: 40.5 MB.
+System memory in use after: 40.6 MB.
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1865.
-Total: 2.291500 ms (FindLiveObjects: 0.192300 ms CreateObjectMapping: 0.041800 ms MarkObjects: 1.976400 ms  DeleteObjects: 0.078900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000697 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.6 MB.
-System memory in use after: 68.7 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1868.
-Total: 1.916300 ms (FindLiveObjects: 0.193500 ms CreateObjectMapping: 0.036500 ms MarkObjects: 1.624500 ms  DeleteObjects: 0.059700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000807 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.821 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.7 MB.
-System memory in use after: 68.7 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1871.
-Total: 1.947800 ms (FindLiveObjects: 0.183800 ms CreateObjectMapping: 0.036900 ms MarkObjects: 1.671100 ms  DeleteObjects: 0.055100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000927 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.825 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.7 MB.
-System memory in use after: 68.8 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1874.
-Total: 2.247600 ms (FindLiveObjects: 0.187000 ms CreateObjectMapping: 0.035900 ms MarkObjects: 1.952200 ms  DeleteObjects: 0.070500 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1871.
+Total: 2.897000 ms (FindLiveObjects: 0.370300 ms CreateObjectMapping: 0.090500 ms MarkObjects: 2.379200 ms  DeleteObjects: 0.054500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9904.321043 seconds.
-  path: Assets/Models
-  artifactKey: Guid(470cf969de580f6499bbbde46bc3c598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models using Guid(470cf969de580f6499bbbde46bc3c598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e76657de1dd5362fb2677b71f1e54565') in 0.014205 seconds
-  Import took 0.018033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.054539 seconds.
-  path: Assets/Models/LowPolyMan.fbx
-  artifactKey: Guid(d1b83219d4cd80e44bbb629ba7009bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/LowPolyMan.fbx using Guid(d1b83219d4cd80e44bbb629ba7009bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c895e3f6d7a8a93bfdfdf00b3532db69') in 0.473627 seconds
-  Import took 0.478356 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.229379 seconds.
-  path: Assets/Models/Ch42_nonPBR.fbx
-  artifactKey: Guid(71bba3a0ac7e3e14ab732be183dc4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Ch42_nonPBR.fbx using Guid(71bba3a0ac7e3e14ab732be183dc4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ab5a8dafcd91b0d3eabefd32964d5cd') in 0.835247 seconds
-  Import took 0.840950 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 87.621047 seconds.
-  path: Assets/Models/Ch42_nonPBR.fbx
-  artifactKey: Guid(71bba3a0ac7e3e14ab732be183dc4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Ch42_nonPBR.fbx using Guid(71bba3a0ac7e3e14ab732be183dc4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1147bb9078fd87cf272c37baeaed254a') in 0.068339 seconds
-  Import took 0.071353 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 134.204257 seconds.
-  path: Assets/Models/Characters
-  artifactKey: Guid(0c56f89bf3b610b44a5b4a5904f8c030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters using Guid(0c56f89bf3b610b44a5b4a5904f8c030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad25959c91b65a0897a2208a35c3519c') in 0.007660 seconds
-  Import took 0.010531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001484 seconds.
-  path: Assets/Models/Characters
-  artifactKey: Guid(0c56f89bf3b610b44a5b4a5904f8c030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters using Guid(0c56f89bf3b610b44a5b4a5904f8c030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad25959c91b65a0897a2208a35c3519c') in 0.002027 seconds
-  Import took 0.003982 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.334088 seconds.
-  path: Assets/Models/Characters/Male_01
-  artifactKey: Guid(05a66a26c619e3e439cb007dde1d5373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01 using Guid(05a66a26c619e3e439cb007dde1d5373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '161821afcf1b2689192166b8b83c725f') in 0.006946 seconds
-  Import took 0.009520 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004634 seconds.
-  path: Assets/Models/Characters/Male_01
-  artifactKey: Guid(05a66a26c619e3e439cb007dde1d5373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01 using Guid(05a66a26c619e3e439cb007dde1d5373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '161821afcf1b2689192166b8b83c725f') in 0.002569 seconds
-  Import took 0.005231 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 86.406391 seconds.
-  path: Assets/Models/Characters/Male_01/Ch42_1001_Diffuse.png
-  artifactKey: Guid(37d4c019b8a7c274eab857979cdc418f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Ch42_1001_Diffuse.png using Guid(37d4c019b8a7c274eab857979cdc418f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd43f252c4d1adcc544e6296ef6b61817') in 0.053518 seconds
-  Import took 0.056221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/Models/Characters/Male_01/Ch42_1002_Diffuse.png
-  artifactKey: Guid(293d95bd972348c40b1ce72dacd43363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Ch42_1002_Diffuse.png using Guid(293d95bd972348c40b1ce72dacd43363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a0bcf2457cff8470282b06a8861b1c') in 0.195170 seconds
-  Import took 0.197428 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000280 seconds.
-  path: Assets/Models/Characters/Male_01/Ch42_1001_Glossiness.png
-  artifactKey: Guid(1a4d08d51aae23141ba9e6c06a044256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Ch42_1001_Glossiness.png using Guid(1a4d08d51aae23141ba9e6c06a044256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '953f1a3e45bc5246acd1b74eb0eed1b6') in 0.012501 seconds
-  Import took 0.014880 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/Models/Characters/Male_01/Ch42_1001_Specular.png
-  artifactKey: Guid(e48a191ef4ea5f24fa3719c19982c573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Ch42_1001_Specular.png using Guid(e48a191ef4ea5f24fa3719c19982c573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4cba0ab1e13ce403838d288f18a8c52') in 0.046720 seconds
-  Import took 0.048753 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000231 seconds.
-  path: Assets/Models/Characters/Male_01/Ch42_nonPBR.fbx
-  artifactKey: Guid(71bba3a0ac7e3e14ab732be183dc4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Ch42_nonPBR.fbx using Guid(71bba3a0ac7e3e14ab732be183dc4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f382c35d86f672bb0e00088603861efd') in 0.137622 seconds
-  Import took 0.140186 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/Models/Characters/Male_01/Ch42_1001_Normal.png
-  artifactKey: Guid(9187aedc8d8cd0842850a22bacea36da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Ch42_1001_Normal.png using Guid(9187aedc8d8cd0842850a22bacea36da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7e4f00fa8eee670dfb9af7fc6a8d1d') in 0.011733 seconds
-  Import took 0.014004 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.913503 seconds.
-  path: Assets/Models/Characters/Male_01/Ch42_1001_Normal.png
-  artifactKey: Guid(9187aedc8d8cd0842850a22bacea36da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Ch42_1001_Normal.png using Guid(9187aedc8d8cd0842850a22bacea36da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07bf41ed3d92aee78ac7add40f6cad75') in 0.025663 seconds
-  Import took 0.030243 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001046 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.8 MB.
-System memory in use after: 85.9 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1924.
-Total: 2.442300 ms (FindLiveObjects: 0.302900 ms CreateObjectMapping: 0.044400 ms MarkObjects: 2.025600 ms  DeleteObjects: 0.067500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 443.283962 seconds.
+  Time since last request: 235.271576 seconds.
   path: Assets/Models/Robot Kyle/Model/Animations/Humanoid.controller
   artifactKey: Guid(0d65310a6a6691b4bbe67fe2bd41c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/Humanoid.controller using Guid(0d65310a6a6691b4bbe67fe2bd41c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb38ad1b5ae97f8dea75a42cdf57a9c') in 0.068051 seconds
-  Import took 0.070848 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.995281 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/Idle.anim
-  artifactKey: Guid(2042c4ddae13a354f866f932a5126371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/Idle.anim using Guid(2042c4ddae13a354f866f932a5126371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b4ddf0a43b078510f85f3fec4730c8') in 0.012635 seconds
-  Import took 0.015118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.599377 seconds.
-  path: Assets/Models/Robot Kyle
-  artifactKey: Guid(e086aaa8e7378e545a123fcc7ef4b87d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle using Guid(e086aaa8e7378e545a123fcc7ef4b87d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46dc86587a92b6dd17d1d1791e8585f4') in 0.006450 seconds
-  Import took 0.008708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.749793 seconds.
-  path: Assets/Models/Robot Kyle/Model
-  artifactKey: Guid(815eff5a277e9aa4ea1b890c6b715e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model using Guid(815eff5a277e9aa4ea1b890c6b715e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75f573d422357b740aa2cac7a53eae00') in 0.006564 seconds
-  Import took 0.008831 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.066592 seconds.
-  path: Assets/Models/Robot Kyle/Model/Robot Kyle.fbx
-  artifactKey: Guid(320b1c2af77554f99a1658df4a6d3d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Robot Kyle.fbx using Guid(320b1c2af77554f99a1658df4a6d3d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3235f76b2964507eef9acce0ba227e3') in 0.078348 seconds
-  Import took 0.081360 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.979503 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations
-  artifactKey: Guid(df723a37c9052f949b3107b8f45633a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations using Guid(df723a37c9052f949b3107b8f45633a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a6f9d5a354ef4bb22efa55e2de4be5f') in 0.006487 seconds
-  Import took 0.008739 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.060285 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/xbot@Arm Stretching (1).fbx
-  artifactKey: Guid(e709922a100025e4197bfd79840d2d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/xbot@Arm Stretching (1).fbx using Guid(e709922a100025e4197bfd79840d2d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a878c26774fa7363a16690f7a8d650') in 0.011114 seconds
-  Import took 0.013801 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/xbot@Jump Backward.fbx
-  artifactKey: Guid(da5fc2c1a069c8c40a080eb2f4e6dff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/xbot@Jump Backward.fbx using Guid(da5fc2c1a069c8c40a080eb2f4e6dff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9375e722db44aefad943ffa2de1e4d6') in 0.009763 seconds
-  Import took 0.012161 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/xbot@Jump (1).fbx
-  artifactKey: Guid(877d60d17057463419d91394d7e4f5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/xbot@Jump (1).fbx using Guid(877d60d17057463419d91394d7e4f5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af111b38b2c81e0a89db27d7768f26f2') in 0.010189 seconds
-  Import took 0.012727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.628658 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/Landing.anim
-  artifactKey: Guid(0d279a5d22cf66f42bc0a86affd89b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/Landing.anim using Guid(0d279a5d22cf66f42bc0a86affd89b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e3fa8615f9911be6ede7f7e16830c7') in 0.015083 seconds
-  Import took 0.017530 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.120363 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/Walk.anim
-  artifactKey: Guid(4fb8d146a1778e5459497d3919cac4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/Walk.anim using Guid(4fb8d146a1778e5459497d3919cac4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd930f6715d875b08cf76ef49f45e48b6') in 0.013985 seconds
-  Import took 0.016440 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000943 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/Walk.anim
-  artifactKey: Guid(4fb8d146a1778e5459497d3919cac4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/Walk.anim using Guid(4fb8d146a1778e5459497d3919cac4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd930f6715d875b08cf76ef49f45e48b6') in 0.008968 seconds
-  Import took 0.011243 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.433465 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/Falling.anim
-  artifactKey: Guid(138800f231d4d3a46ab7d9609636bc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/Falling.anim using Guid(138800f231d4d3a46ab7d9609636bc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34c614058284a63ce3f88c8ee2f59b92') in 0.022439 seconds
-  Import took 0.025123 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.460555 seconds.
-  path: Assets/Models/Characters/Male_01/Animations
-  artifactKey: Guid(0ada1f60f4528274dad845ae353e05e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations using Guid(0ada1f60f4528274dad845ae353e05e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '165119923af3ce64358682849b282478') in 0.006410 seconds
-  Import took 0.008682 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.939285 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(30b2aa7c8b3cfa347be3110dcdb1644a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(30b2aa7c8b3cfa347be3110dcdb1644a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2bf3b0bed76d9577941e36e3aa6b55d') in 0.006782 seconds
-  Import took 0.009035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.416299 seconds.
-  path: Assets/Prefabs
-  artifactKey: Guid(5b3bf66c6eb8105408e554980fb83b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs using Guid(5b3bf66c6eb8105408e554980fb83b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e33f30f5f9108bb7c54118106e0047') in 0.006588 seconds
-  Import took 0.009220 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.237076 seconds.
-  path: Assets/Prefabs/OriginalPrefab.prefab
-  artifactKey: Guid(6f02c000bdba0824a83f44a97cb9cbfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/OriginalPrefab.prefab using Guid(6f02c000bdba0824a83f44a97cb9cbfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759154cf6d13f69f4287d135f97e1a47') in 0.071542 seconds
-  Import took 0.074624 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.639864 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx
-  artifactKey: Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx using Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584acd7d280ba48281ad9a4152527949') in 0.006287 seconds
-  Import took 0.008858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.675920 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/xbot@Running Jump.fbx
-  artifactKey: Guid(3838e5f39067fed4d87d9735d62f38fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/xbot@Running Jump.fbx using Guid(3838e5f39067fed4d87d9735d62f38fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4defb6de34afa97155adb4eb0e96c9') in 0.010559 seconds
-  Import took 0.013780 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.672880 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx
-  artifactKey: Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx using Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4770f4c6e5ea9d270492409396c8d9be') in 0.005841 seconds
-  Import took 0.008716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.011622 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx
-  artifactKey: Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx using Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4770f4c6e5ea9d270492409396c8d9be') in 0.006352 seconds
-  Import took 0.008877 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.316445 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/xbot@Jump (1).fbx
-  artifactKey: Guid(2a0a06adcc7ea1f449c9357a23331a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/xbot@Jump (1).fbx using Guid(2a0a06adcc7ea1f449c9357a23331a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77db9f59f2541e548c8fda483341fd1e') in 0.010491 seconds
-  Import took 0.013114 seconds .
+Start importing Assets/Models/Robot Kyle/Model/Animations/Humanoid.controller using Guid(0d65310a6a6691b4bbe67fe2bd41c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a186ed459f429bb7baaf6dc0403e5267') in 0.224644 seconds
+  Import took 0.227877 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000696 seconds.
+Registered in 0.001723 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.429 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1420 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.9 MB.
+System memory in use after: 69.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1874.
+Total: 4.274900 ms (FindLiveObjects: 0.296200 ms CreateObjectMapping: 0.073900 ms MarkObjects: 3.818300 ms  DeleteObjects: 0.084400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 440.829970 seconds.
+  path: Assets/Models/Robot Kyle/Model/Animations/Humanoid.controller
+  artifactKey: Guid(0d65310a6a6691b4bbe67fe2bd41c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Robot Kyle/Model/Animations/Humanoid.controller using Guid(0d65310a6a6691b4bbe67fe2bd41c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e05b50c21d1fedd861b0ed0ce8a3296') in 0.290696 seconds
+  Import took 0.299560 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002499 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.195 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1878.
+Total: 3.611400 ms (FindLiveObjects: 0.584200 ms CreateObjectMapping: 0.111500 ms MarkObjects: 2.836700 ms  DeleteObjects: 0.076000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.629306 seconds.
+  path: Assets/Mezanix
+  artifactKey: Guid(e9672875cb6e3c94ebc6e3d62eae4b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mezanix using Guid(e9672875cb6e3c94ebc6e3d62eae4b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '074ff9609a8869ee60863a734a8a8a97') in 0.029778 seconds
+  Import took 0.034153 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001938 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.403 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.95 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1881.
+Total: 6.791500 ms (FindLiveObjects: 0.538300 ms CreateObjectMapping: 0.191800 ms MarkObjects: 5.901800 ms  DeleteObjects: 0.155300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001955 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.371 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1884.
+Total: 6.367300 ms (FindLiveObjects: 0.558900 ms CreateObjectMapping: 0.076100 ms MarkObjects: 5.574800 ms  DeleteObjects: 0.154600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.707212 seconds.
+  path: Assets/Models/Characters/Bot/Animation/ybot@Standing Melee Run Jump Attack (1).fbx
+  artifactKey: Guid(73a388859faff8e45a65233c115797c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Bot/Animation/ybot@Standing Melee Run Jump Attack (1).fbx using Guid(73a388859faff8e45a65233c115797c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '986701a64edf73e413376fecddcdc2d2') in 0.145626 seconds
+  Import took 0.152339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.339928 seconds.
+  path: Assets/Models/Characters/Bot/Animation/ybot@Standing Melee Run Jump Attack (1).fbx
+  artifactKey: Guid(73a388859faff8e45a65233c115797c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Bot/Animation/ybot@Standing Melee Run Jump Attack (1).fbx using Guid(73a388859faff8e45a65233c115797c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59ef9a925f7348bc9d56efb3405d2322') in 0.012219 seconds
+  Import took 0.016920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.191806 seconds.
+  path: Assets/Models/Characters/Bot/Animation/Attacking/Standing Melee Run Jump Attack.anim
+  artifactKey: Guid(d9bf679626fd77e45b24d97ee97d431f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Bot/Animation/Attacking/Standing Melee Run Jump Attack.anim using Guid(d9bf679626fd77e45b24d97ee97d431f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5acd556da427471871a7605f9db7127') in 0.062563 seconds
+  Import took 0.066637 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001524 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.289 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.0 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1887.
+Total: 3.286000 ms (FindLiveObjects: 0.368500 ms CreateObjectMapping: 0.071600 ms MarkObjects: 2.755600 ms  DeleteObjects: 0.087800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001626 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.519 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1890.
+Total: 3.347600 ms (FindLiveObjects: 0.284100 ms CreateObjectMapping: 0.053300 ms MarkObjects: 2.912500 ms  DeleteObjects: 0.095800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 411.228552 seconds.
+  path: Assets/Models/Characters/Bot/Animation/Attacking/Sword And Shield Attack.anim
+  artifactKey: Guid(f5e6991407397cd4795a0dee47f9eaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Bot/Animation/Attacking/Sword And Shield Attack.anim using Guid(f5e6991407397cd4795a0dee47f9eaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b040d311838724434b9e861a03b47d2') in 0.053215 seconds
+  Import took 0.058436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002818 seconds.
+  path: Assets/Models/Characters/Bot/Animation/Attacking/Sword And Shield Attack.anim
+  artifactKey: Guid(f5e6991407397cd4795a0dee47f9eaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Bot/Animation/Attacking/Sword And Shield Attack.anim using Guid(f5e6991407397cd4795a0dee47f9eaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b040d311838724434b9e861a03b47d2') in 0.028424 seconds
+  Import took 0.032075 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001681 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.179 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.1 MB.
+System memory in use after: 69.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1893.
+Total: 3.262000 ms (FindLiveObjects: 0.312900 ms CreateObjectMapping: 0.046700 ms MarkObjects: 2.811300 ms  DeleteObjects: 0.089100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 542.734293 seconds.
+  path: Assets/Data/Prefabs/Characters/Player.prefab
+  artifactKey: Guid(f109ff57572022e4099d224d0126490c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Characters/Player.prefab using Guid(f109ff57572022e4099d224d0126490c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44c402abc1d6e8074518644bd8b487fa') in 0.472549 seconds
+  Import took 0.500333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.641779 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures
+  artifactKey: Guid(e9c1342016b74f94aa055ffaa8a496af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures using Guid(e9c1342016b74f94aa055ffaa8a496af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd702c3aa0731360b114befec7efd957b') in 0.013357 seconds
+  Import took 0.017041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001621 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures
+  artifactKey: Guid(e9c1342016b74f94aa055ffaa8a496af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures using Guid(e9c1342016b74f94aa055ffaa8a496af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd702c3aa0731360b114befec7efd957b') in 0.005217 seconds
+  Import took 0.009236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.056853 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures
+  artifactKey: Guid(72f779284c2f5ba45994480c070e11ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures using Guid(72f779284c2f5ba45994480c070e11ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae08cbbf06a51c7f0ac62237eeaf36e8') in 0.014651 seconds
+  Import took 0.018689 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004713 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures
+  artifactKey: Guid(72f779284c2f5ba45994480c070e11ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures using Guid(72f779284c2f5ba45994480c070e11ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae08cbbf06a51c7f0ac62237eeaf36e8') in 0.006644 seconds
+  Import took 0.011228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.481860 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1
+  artifactKey: Guid(384ed8e95901faa41a6e1aeb2d7243b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1 using Guid(384ed8e95901faa41a6e1aeb2d7243b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acef4e0c2c4503fb833ced9488fdea44') in 0.014200 seconds
+  Import took 0.017978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001906 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1
+  artifactKey: Guid(384ed8e95901faa41a6e1aeb2d7243b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1 using Guid(384ed8e95901faa41a6e1aeb2d7243b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acef4e0c2c4503fb833ced9488fdea44') in 0.006330 seconds
+  Import took 0.010005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.068537 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1
+  artifactKey: Guid(56f2320d11efbfc4e8e09933fd651f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1 using Guid(56f2320d11efbfc4e8e09933fd651f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f43039369d01f463bfd31d4617c0c7') in 0.014180 seconds
+  Import took 0.027348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.070311 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MaxLightness.png
+  artifactKey: Guid(9bc26562f3a01514b9db39204888df98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MaxLightness.png using Guid(9bc26562f3a01514b9db39204888df98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e819b883a111368fedd8eedd3e9dddc0') in 0.056409 seconds
+  Import took 0.059619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MinLightness.png
+  artifactKey: Guid(7f63628d0a5740f4d96de1f461bd3a06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MinLightness.png using Guid(7f63628d0a5740f4d96de1f461bd3a06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe50178e2ec2bb9f98f961c86cec623') in 0.027849 seconds
+  Import took 0.042251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MaxLightness.png
+  artifactKey: Guid(3382de563ce9f804391ec8f4987eed1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MaxLightness.png using Guid(3382de563ce9f804391ec8f4987eed1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66a72451ace760d5bc3830221e72b75') in 0.038056 seconds
+  Import took 0.042745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000610 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MaxLightness.png
+  artifactKey: Guid(9f3d30c9b732c754f92132642290e191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MaxLightness.png using Guid(9f3d30c9b732c754f92132642290e191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eee1df8c754d39c6dbd3aa0c997b15b') in 0.036003 seconds
+  Import took 0.041313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000850 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MedLightness.png
+  artifactKey: Guid(d4b8bf084423e814b9c997694c126669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MedLightness.png using Guid(d4b8bf084423e814b9c997694c126669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de5ec7af386d75a33ebc97be258c327c') in 0.024961 seconds
+  Import took 0.029536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MedLightness.png
+  artifactKey: Guid(88d407b968ef1694d98f0035ced7a72a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MedLightness.png using Guid(88d407b968ef1694d98f0035ced7a72a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2991831f079ed4d23f0386283e15a47') in 0.028200 seconds
+  Import took 0.031966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000491 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MinLightness.png
+  artifactKey: Guid(9ac14c2ec47ea4a479b25b261d7014e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MinLightness.png using Guid(9ac14c2ec47ea4a479b25b261d7014e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '993c03a5586cc4b0c5e8dc27687bfb87') in 0.024857 seconds
+  Import took 0.029141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MedLightness.png
+  artifactKey: Guid(48b37cd02af83ba4f972a7b07cd7cfbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MedLightness.png using Guid(48b37cd02af83ba4f972a7b07cd7cfbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d8be7979470b58a5149a967bab1673') in 0.024843 seconds
+  Import took 0.037130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MinLightness.png
+  artifactKey: Guid(d8ea263808e883145b880f4e3e82712b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MinLightness.png using Guid(d8ea263808e883145b880f4e3e82712b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd96aca99ced4bad536aef212b674fcae') in 0.020364 seconds
+  Import took 0.023859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.772837 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials
+  artifactKey: Guid(3e80c76561a692446b9d985fd06c92d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials using Guid(3e80c76561a692446b9d985fd06c92d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ea8a1042ef6def24d6d8014298e506') in 0.015357 seconds
+  Import took 0.020781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089489 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MaxLightness.mat
+  artifactKey: Guid(f088e83810086dd47ab9a9718144ed37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MaxLightness.mat using Guid(f088e83810086dd47ab9a9718144ed37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f9e7c4931bd1b90fa4794042781510c') in 0.047067 seconds
+  Import took 0.068424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000419 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MinLightness.mat
+  artifactKey: Guid(5cd89167416b68048802338ad9219ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MinLightness.mat using Guid(5cd89167416b68048802338ad9219ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c9a5b27c48bdcd836ef40d9621f75dd') in 0.023179 seconds
+  Import took 0.026341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MedLightness.mat
+  artifactKey: Guid(db9e9e97d836e4c4ba6e23a8bb59df7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MedLightness.mat using Guid(db9e9e97d836e4c4ba6e23a8bb59df7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8706e7ff8e1d5a54796fe72673ae80') in 0.044511 seconds
+  Import took 0.048048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000483 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MaxLightness.mat
+  artifactKey: Guid(0f3f7bfbfc24fd245971f1b42199cff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MaxLightness.mat using Guid(0f3f7bfbfc24fd245971f1b42199cff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dca91b3f9703c1d95ea47ed4c73d1f64') in 0.024749 seconds
+  Import took 0.056044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MedLightness.mat
+  artifactKey: Guid(ca6a2771d00019e4eba3d3b1386215a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MedLightness.mat using Guid(ca6a2771d00019e4eba3d3b1386215a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9fd40e29e7bfa26790cef80efe3a5c8') in 0.026034 seconds
+  Import took 0.046293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MinLightness.mat
+  artifactKey: Guid(f9ab68b7517ed34488cdbbbf976b7ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MaxColorIntensity_MinLightness.mat using Guid(f9ab68b7517ed34488cdbbbf976b7ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7706a24adf2d664c349dcdd7c8887bf') in 0.028754 seconds
+  Import took 0.032299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000453 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MedLightness.mat
+  artifactKey: Guid(ca309c5926d65b34ab5267404b8debd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MedLightness.mat using Guid(ca309c5926d65b34ab5267404b8debd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75437ca7b4432fee13f9a95d37c5aa76') in 0.025221 seconds
+  Import took 0.029517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MaxLightness.mat
+  artifactKey: Guid(1705db4e7c5e95047b66293086e5a7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MaxLightness.mat using Guid(1705db4e7c5e95047b66293086e5a7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba46979d10d66e87c2e575fa08b8f47d') in 0.028224 seconds
+  Import took 0.032916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000450 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MinLightness.mat
+  artifactKey: Guid(5d027e838ac6db348980898c93402db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MinColorIntensity_MinLightness.mat using Guid(5d027e838ac6db348980898c93402db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22bc7b3c22eaeba9eed35383aaadb053') in 0.028512 seconds
+  Import took 0.032164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.687706 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_Demo_Scene
+  artifactKey: Guid(7738f56b32b2a8e4480bb021c653169c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_Demo_Scene using Guid(7738f56b32b2a8e4480bb021c653169c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8262abfb4e8d09fa7a318df9dae231f3') in 0.013786 seconds
+  Import took 0.017712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.573479 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_1_Documentation
+  artifactKey: Guid(b763f57ab5f015d4e920c4b02ea5bea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_1_Documentation using Guid(b763f57ab5f015d4e920c4b02ea5bea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a70ee851405a3a66761ef4a0855ee2f5') in 0.010967 seconds
+  Import took 0.014655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.976722 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1
+  artifactKey: Guid(eeda6a37de522534e93ec636f5adf50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1 using Guid(eeda6a37de522534e93ec636f5adf50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16811aa413d871985b6a5319fa82bd51') in 0.013418 seconds
+  Import took 0.016802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001212 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1
+  artifactKey: Guid(eeda6a37de522534e93ec636f5adf50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1 using Guid(eeda6a37de522534e93ec636f5adf50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16811aa413d871985b6a5319fa82bd51') in 0.005703 seconds
+  Import took 0.008907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.356367 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan
+  artifactKey: Guid(269ac10e90130d84ba67c33ab68a74e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan using Guid(269ac10e90130d84ba67c33ab68a74e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a21c21f10f5dbc98b6e3715c8461d56') in 0.014761 seconds
+  Import took 0.018291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088151 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Old_Painted_Wood_basecolor_MaxCoatingAmount_Cyan.tga
+  artifactKey: Guid(373644c0cef40ca41b793c10d77ab045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Old_Painted_Wood_basecolor_MaxCoatingAmount_Cyan.tga using Guid(373644c0cef40ca41b793c10d77ab045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b89ad4043193fe54d6029b4f7047f8a') in 0.028979 seconds
+  Import took 0.033078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000431 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Old_Painted_Wood_basecolor_MedCoatingAmount_Cyan.tga
+  artifactKey: Guid(810c70a4a476fc94f8fb64be69d29938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Old_Painted_Wood_basecolor_MedCoatingAmount_Cyan.tga using Guid(810c70a4a476fc94f8fb64be69d29938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19af384225484eae36a1004964b10b31') in 0.022693 seconds
+  Import took 0.025911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Old_Painted_Wood_basecolor_MinCoatingAmount_Cyan.tga
+  artifactKey: Guid(d13a8846b196bd546a6838610bbcd072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Old_Painted_Wood_basecolor_MinCoatingAmount_Cyan.tga using Guid(d13a8846b196bd546a6838610bbcd072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74afb25d919c4b4649050b1bf4f2a90d') in 0.020689 seconds
+  Import took 0.024447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.866149 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials
+  artifactKey: Guid(629b332f97b5c5d48b585d7a2b6990f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials using Guid(629b332f97b5c5d48b585d7a2b6990f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98db8840b7151b2299c5ba3063c82681') in 0.005768 seconds
+  Import took 0.010074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.181608 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials/Old_Painted_Wood_basecolor_MaxCoatingAmount_Cyan.mat
+  artifactKey: Guid(bf4d0317d916c494f869f9d8d88aa680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials/Old_Painted_Wood_basecolor_MaxCoatingAmount_Cyan.mat using Guid(bf4d0317d916c494f869f9d8d88aa680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e73735490a9098acb93db93de927d35') in 0.022747 seconds
+  Import took 0.026771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Cyan.mat
+  artifactKey: Guid(63df64019e65f7c4ab13dda27a395b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Cyan.mat using Guid(63df64019e65f7c4ab13dda27a395b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd97701096f5babadb143a3173945afe8') in 0.026532 seconds
+  Import took 0.029884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Cyan.mat
+  artifactKey: Guid(6ba5b71cd3a2ff44ea97364fdf9e0dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Cyan/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Cyan.mat using Guid(6ba5b71cd3a2ff44ea97364fdf9e0dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875dedcabd3cf379ebefd8b6e0917c51') in 0.025451 seconds
+  Import took 0.067109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.305533 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1
+  artifactKey: Guid(02c53e223d134dd4d8cbf5eafc79f4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1 using Guid(02c53e223d134dd4d8cbf5eafc79f4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce4f95062b68808af03d3b92198bab74') in 0.012669 seconds
+  Import took 0.016952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000772 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1
+  artifactKey: Guid(02c53e223d134dd4d8cbf5eafc79f4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1 using Guid(02c53e223d134dd4d8cbf5eafc79f4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce4f95062b68808af03d3b92198bab74') in 0.004776 seconds
+  Import took 0.009000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.273763 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_1_basecolor.tga
+  artifactKey: Guid(e73a9d00bac7b0646991e8d72ca026e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_1_basecolor.tga using Guid(e73a9d00bac7b0646991e8d72ca026e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e49ddd9c3a093f9d39fd35794422295') in 0.027834 seconds
+  Import took 0.032437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_2_basecolor.tga
+  artifactKey: Guid(60abca455b271cf4ca3231ff8f0c2721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_2_basecolor.tga using Guid(60abca455b271cf4ca3231ff8f0c2721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ba2837b233f9c1ce8837c4b6aad6c9f') in 0.023835 seconds
+  Import took 0.027411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000481 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_3_basecolor.tga
+  artifactKey: Guid(46830561e94752a41aa50a8c7a6ef02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_3_basecolor.tga using Guid(46830561e94752a41aa50a8c7a6ef02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5791a796b306cdca831001f26521ce13') in 0.028334 seconds
+  Import took 0.044049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_basecolor.tga
+  artifactKey: Guid(6687f5127c24ee74db4acb70216ea32b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Wood_Bark_1_basecolor.tga using Guid(6687f5127c24ee74db4acb70216ea32b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fb6a54685a84894b712f4dcf0334035') in 0.027959 seconds
+  Import took 0.031369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.812158 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials
+  artifactKey: Guid(37a944fdf90a4aa439e58eb85ae520c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials using Guid(37a944fdf90a4aa439e58eb85ae520c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa916d01524cfec15b31c5171278cbe') in 0.005268 seconds
+  Import took 0.009149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.103614 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_1_basecolor.mat
+  artifactKey: Guid(2c011bc6a500920428e8b1665bc28253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_1_basecolor.mat using Guid(2c011bc6a500920428e8b1665bc28253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '610c78c4c32f06a86827d330fd6463b5') in 0.024306 seconds
+  Import took 0.059716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000469 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_2_basecolor.mat
+  artifactKey: Guid(9b7535e1ed5c95141ae45579896325ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_2_basecolor.mat using Guid(9b7535e1ed5c95141ae45579896325ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec57cb967923a668baeae260951ad8d2') in 0.023715 seconds
+  Import took 0.040282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_3_basecolor.mat
+  artifactKey: Guid(5f3f1bb388690874fbed5485250640dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_3_basecolor.mat using Guid(5f3f1bb388690874fbed5485250640dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9803974230ec617435c8c2f6482bbf') in 0.027300 seconds
+  Import took 0.031634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_basecolor.mat
+  artifactKey: Guid(0a366e5a36fbbc849ba636dde51beea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Wood_Bark_1/Materials/Wood_Bark_1_basecolor.mat using Guid(0a366e5a36fbbc849ba636dde51beea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d24b21d050fa222c1cc504310fddd0d') in 0.030615 seconds
+  Import took 0.034732 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.381949 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MaxColorIntensity_MaxLightness.png
+  artifactKey: Guid(72e8100dcafcf0147a0a90c42e36fdaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MaxColorIntensity_MaxLightness.png using Guid(72e8100dcafcf0147a0a90c42e36fdaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '529f1eb3fc5449f5fc97242c2521b626') in 0.022114 seconds
+  Import took 0.027397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MinColorIntensity_MedLightness.png
+  artifactKey: Guid(680f8fec125a50f499c4e07910a8895a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MinColorIntensity_MedLightness.png using Guid(680f8fec125a50f499c4e07910a8895a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '210232e4fd93800ab5317c7a54ef0b19') in 0.024122 seconds
+  Import took 0.227415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MaxColorIntensity_MedLightness.png
+  artifactKey: Guid(9df42848536c0a74ba7c0b62736b375d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MaxColorIntensity_MedLightness.png using Guid(9df42848536c0a74ba7c0b62736b375d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90cf8301299c4264b245831cf0b84787') in 0.030111 seconds
+  Import took 0.033330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MedColorIntensity_MinLightness.png
+  artifactKey: Guid(5dd5e2ca37821dd4db78acf0751929df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MedColorIntensity_MinLightness.png using Guid(5dd5e2ca37821dd4db78acf0751929df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5db2cf4f5fb63b4a47cf3b484032a4') in 0.026200 seconds
+  Import took 1.176703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000542 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MedColorIntensity_MedLightness.png
+  artifactKey: Guid(faf4661d4fce22143a4d334e6fb7adfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MedColorIntensity_MedLightness.png using Guid(faf4661d4fce22143a4d334e6fb7adfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfdf3f4bc059a34e4022b7f25a68f305') in 0.024837 seconds
+  Import took 0.028940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000747 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MaxColorIntensity_MinLightness.png
+  artifactKey: Guid(dcf9efcdd8732794199b2b79657f5673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MaxColorIntensity_MinLightness.png using Guid(dcf9efcdd8732794199b2b79657f5673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1baa9829aeb95dbe2783e9c0c8628997') in 0.028536 seconds
+  Import took 0.032842 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000405 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MinColorIntensity_MinLightness.png
+  artifactKey: Guid(118f31672cd9fb345b013d130a937754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MinColorIntensity_MinLightness.png using Guid(118f31672cd9fb345b013d130a937754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785fbd678adb099cfc8357466a24dea0') in 0.029718 seconds
+  Import took 0.033571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MedColorIntensity_MaxLightness.png
+  artifactKey: Guid(bbd50427f09673941a854c4224fcf028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MedColorIntensity_MaxLightness.png using Guid(bbd50427f09673941a854c4224fcf028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a50d21b4dc9589db98dac8fd3ed3044') in 0.023432 seconds
+  Import took 0.026730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MinColorIntensity_MaxLightness.png
+  artifactKey: Guid(cc1f17265676d1d4d9770f7e3ef83a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Interior_Wood_1_basecolor_MinColorIntensity_MaxLightness.png using Guid(cc1f17265676d1d4d9770f7e3ef83a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb9b228bfbc94f22042f8b79ef460ae0') in 0.021240 seconds
+  Import took 0.024709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.171085 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials
+  artifactKey: Guid(ba1bcd799e3a51f4d8997c2a10647f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials using Guid(ba1bcd799e3a51f4d8997c2a10647f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9314b7233baee385743172b1882e79') in 0.005912 seconds
+  Import took 0.010490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.083372 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MaxColorIntensity_MaxLightness.mat
+  artifactKey: Guid(b87dc3dede67df143a45b6bc35d1979a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MaxColorIntensity_MaxLightness.mat using Guid(b87dc3dede67df143a45b6bc35d1979a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e947bcb9614c00bac274e00239e861') in 0.024104 seconds
+  Import took 0.052914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000439 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MedColorIntensity_MaxLightness.mat
+  artifactKey: Guid(33e524b2c7c45cb4598e3eb143efc76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MedColorIntensity_MaxLightness.mat using Guid(33e524b2c7c45cb4598e3eb143efc76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b87bba8104ab89ab5b5f78ac7e1882b9') in 0.025308 seconds
+  Import took 0.028585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MaxColorIntensity_MedLightness.mat
+  artifactKey: Guid(e7eaac3929b974541b3ecb4c9852e905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MaxColorIntensity_MedLightness.mat using Guid(e7eaac3929b974541b3ecb4c9852e905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c38a65f2db4a17fcd87ee26d47c6ad8') in 0.026380 seconds
+  Import took 0.036778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MedColorIntensity_MedLightness.mat
+  artifactKey: Guid(261fc6ba388fdea42b200193b2187175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MedColorIntensity_MedLightness.mat using Guid(261fc6ba388fdea42b200193b2187175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1368313bcba871d08397be65feb799c4') in 0.027369 seconds
+  Import took 0.031968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000382 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MaxColorIntensity_MinLightness.mat
+  artifactKey: Guid(095381322c7ac724b8b6ff356f04929a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MaxColorIntensity_MinLightness.mat using Guid(095381322c7ac724b8b6ff356f04929a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc8ce7448ff7d22fbcf942f57b1aee64') in 0.026355 seconds
+  Import took 0.029891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MinColorIntensity_MaxLightness.mat
+  artifactKey: Guid(84f36545290558b4999deaf40861d198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MinColorIntensity_MaxLightness.mat using Guid(84f36545290558b4999deaf40861d198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88435cb7df253f2d3cacedc74ec18011') in 0.024212 seconds
+  Import took 0.027145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000551 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MinColorIntensity_MinLightness.mat
+  artifactKey: Guid(7c471337ec1659946ab9cc546d0dfb3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MinColorIntensity_MinLightness.mat using Guid(7c471337ec1659946ab9cc546d0dfb3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27c741e6d5beaebe127ca564025d8e6a') in 0.025441 seconds
+  Import took 0.029175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000613 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MedColorIntensity_MinLightness.mat
+  artifactKey: Guid(f4caa11616ecb9041b459a020c575a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MedColorIntensity_MinLightness.mat using Guid(f4caa11616ecb9041b459a020c575a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e814702c2f6b346cc0535b9aa94cc65e') in 0.026607 seconds
+  Import took 0.030838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MinColorIntensity_MedLightness.mat
+  artifactKey: Guid(ebce2ab4039f332449bc802002d88e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Interior_Wood_1/Materials/Interior_Wood_1_basecolor_MinColorIntensity_MedLightness.mat using Guid(ebce2ab4039f332449bc802002d88e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c99820e12cf62ba409ef365c087d7b') in 0.023570 seconds
+  Import took 0.027336 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001645 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.241 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.1 MB.
+System memory in use after: 86.2 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1938.
+Total: 3.570300 ms (FindLiveObjects: 0.494200 ms CreateObjectMapping: 0.091100 ms MarkObjects: 2.883400 ms  DeleteObjects: 0.099500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001464 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.181 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.1 MB.
+System memory in use after: 86.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1941.
+Total: 4.269200 ms (FindLiveObjects: 0.368700 ms CreateObjectMapping: 0.059800 ms MarkObjects: 3.721800 ms  DeleteObjects: 0.117100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001347 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.152 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.1 MB.
+System memory in use after: 86.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1944.
+Total: 3.543600 ms (FindLiveObjects: 0.373400 ms CreateObjectMapping: 0.057800 ms MarkObjects: 3.003100 ms  DeleteObjects: 0.107300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2869.541171 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MinLightness.mat
+  artifactKey: Guid(5cd89167416b68048802338ad9219ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Exterior_Flooring_Wood_1/Materials/Exterior_Flooring_Wood_1_basecolor_MedColorIntensity_MinLightness.mat using Guid(5cd89167416b68048802338ad9219ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40dcdba086b9a0be53726d185fa28b94') in 0.080531 seconds
+  Import took 0.084884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Magenta/Materials/Old_Painted_Wood_basecolor_Med_CoatingAmount_Magenta.mat
+  artifactKey: Guid(e02320e1a3670da40bf1404eb0c1b9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Magenta/Materials/Old_Painted_Wood_basecolor_Med_CoatingAmount_Magenta.mat using Guid(e02320e1a3670da40bf1404eb0c1b9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '131c5e1358da9d0ba8e98c84d6e37a56') in 0.018930 seconds
+  Import took 0.021489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Yellow/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Yellow.mat
+  artifactKey: Guid(521403030cac0b84e8740f04dc03b26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Yellow/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Yellow.mat using Guid(521403030cac0b84e8740f04dc03b26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75337005f2a9567c80d6e06ebdccda8e') in 0.020026 seconds
+  Import took 0.022699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Blue.mat
+  artifactKey: Guid(6e68f052b7d3c5b418f26a88b5b38de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Blue.mat using Guid(6e68f052b7d3c5b418f26a88b5b38de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca0401ade7655d891345b7a87fe12fb8') in 0.021960 seconds
+  Import took 0.072076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_Med_CoatingAmount_Blue.mat
+  artifactKey: Guid(c29d4d79c18e3284e8d85d2266d72b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_Med_CoatingAmount_Blue.mat using Guid(c29d4d79c18e3284e8d85d2266d72b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe1b69ad2e4485fa9c413cf531fdd4dc') in 0.015854 seconds
+  Import took 0.111251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Blue.mat
+  artifactKey: Guid(6e68f052b7d3c5b418f26a88b5b38de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Blue.mat using Guid(6e68f052b7d3c5b418f26a88b5b38de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca0401ade7655d891345b7a87fe12fb8') in 0.017154 seconds
+  Import took 0.019619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Red/Materials/Old_Painted_Wood_basecolor_MaxCoatingAmount_Red.mat
+  artifactKey: Guid(d4dd9fc72c1015443979ccf1617ed3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Red/Materials/Old_Painted_Wood_basecolor_MaxCoatingAmount_Red.mat using Guid(d4dd9fc72c1015443979ccf1617ed3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87152761a8296153dea33292251a73ce') in 0.017819 seconds
+  Import took 0.020224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Red/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Red.mat
+  artifactKey: Guid(b5554106d0493a44db3e767036d87a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Red/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Red.mat using Guid(b5554106d0493a44db3e767036d87a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e979491bc4cded18ef0b2bc57e60681') in 0.021925 seconds
+  Import took 0.024537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Green.mat
+  artifactKey: Guid(1dedd3a98ead5b24dacbf0b626391b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Green.mat using Guid(1dedd3a98ead5b24dacbf0b626391b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e19f73fe6b2bf5ce26cb9496b752db8') in 0.016931 seconds
+  Import took 0.049477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Yellow/Materials/Old_Painted_Wood_basecolor_MaxCoatingAmount_Yellow.mat
+  artifactKey: Guid(9188b3e8b3ae59b46a111e8a47a13a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Yellow/Materials/Old_Painted_Wood_basecolor_MaxCoatingAmount_Yellow.mat using Guid(9188b3e8b3ae59b46a111e8a47a13a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fc2be766707df9cb1e8e13fa17d6093') in 0.018850 seconds
+  Import took 0.104402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Green.mat
+  artifactKey: Guid(1dedd3a98ead5b24dacbf0b626391b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Green.mat using Guid(1dedd3a98ead5b24dacbf0b626391b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e19f73fe6b2bf5ce26cb9496b752db8') in 0.016164 seconds
+  Import took 0.018367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Magenta/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Magenta.mat
+  artifactKey: Guid(38f75374bead5b1469754164c250a036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Magenta/Materials/Old_Painted_Wood_basecolor_Max_CoatingAmount_Magenta.mat using Guid(38f75374bead5b1469754164c250a036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4effa2701926133dcf814852244fe981') in 0.017748 seconds
+  Import took 0.020219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Green.mat
+  artifactKey: Guid(8935d128230deb944bfbe7b1fdf560a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Green.mat using Guid(8935d128230deb944bfbe7b1fdf560a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878eb44acaeea77eb5e78c9a6c2dc679') in 0.017605 seconds
+  Import took 0.019955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Green.mat
+  artifactKey: Guid(bef0a68cde57f9446973c9f63186f13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Green/Materials/Old_Painted_Wood_basecolor_MedCoatingAmount_Green.mat using Guid(bef0a68cde57f9446973c9f63186f13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a76a4b92b9e40a43ae215a6b2c7dabea') in 0.016885 seconds
+  Import took 0.019359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Magenta/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Magenta.mat
+  artifactKey: Guid(d14063bb02a31fa4eb8be45b7eb3771e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Magenta/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Magenta.mat using Guid(d14063bb02a31fa4eb8be45b7eb3771e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e78a0493eabc3599ea5ff78007cd8e') in 0.015820 seconds
+  Import took 0.018909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Blue.mat
+  artifactKey: Guid(3f2d233aa8a002c4b82838100e97bc2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Texture/Mezanix/RealisticWoodTextures/0_0_Textures/Old_Painted_Wood_1/Blue/Materials/Old_Painted_Wood_basecolor_MinCoatingAmount_Blue.mat using Guid(3f2d233aa8a002c4b82838100e97bc2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b28ac05bdaa193cbd6fabe691db28ab7') in 0.117936 seconds
+  Import took 0.120977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 77.903576 seconds.
+  path: Assets/Scripts/HealthBar.cs
+  artifactKey: Guid(bbfb1fef714b54e43a483da447374df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HealthBar.cs using Guid(bbfb1fef714b54e43a483da447374df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7881d7458e9e2a8cf8e7d9192541de9f') in 0.008276 seconds
+  Import took 0.010636 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000996 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.937 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1422 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.2 MB.
+System memory in use after: 86.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1949.
+Total: 2.375300 ms (FindLiveObjects: 0.276200 ms CreateObjectMapping: 0.049300 ms MarkObjects: 1.983200 ms  DeleteObjects: 0.065000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000724 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.834 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1422 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.2 MB.
+System memory in use after: 86.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1952.
+Total: 2.326600 ms (FindLiveObjects: 0.228100 ms CreateObjectMapping: 0.039500 ms MarkObjects: 1.990500 ms  DeleteObjects: 0.067400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.276689 seconds.
+  path: Assets/Scripts/PlayerStats.cs
+  artifactKey: Guid(8c12000a853243048a83fd2dfc298125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerStats.cs using Guid(8c12000a853243048a83fd2dfc298125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb6154ee5bebfef7842d61c4644e5b86') in 0.010708 seconds
+  Import took 0.013730 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000728 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.829 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1423 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.2 MB.
+System memory in use after: 86.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1956.
+Total: 2.611600 ms (FindLiveObjects: 0.369900 ms CreateObjectMapping: 0.073400 ms MarkObjects: 2.102900 ms  DeleteObjects: 0.062500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000719 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.826 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1423 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.2 MB.
+System memory in use after: 86.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1959.
+Total: 2.537300 ms (FindLiveObjects: 0.404100 ms CreateObjectMapping: 0.101700 ms MarkObjects: 1.945300 ms  DeleteObjects: 0.084000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000705 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.846 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1423 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.3 MB.
+System memory in use after: 86.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1962.
+Total: 1.995500 ms (FindLiveObjects: 0.227200 ms CreateObjectMapping: 0.045400 ms MarkObjects: 1.667400 ms  DeleteObjects: 0.054500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001882 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.840 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.1 MB.
-System memory in use after: 86.2 MB.
+Unloading 1437 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.8 MB.
+System memory in use after: 87.8 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1928.
-Total: 1.878800 ms (FindLiveObjects: 0.166300 ms CreateObjectMapping: 0.035000 ms MarkObjects: 1.624700 ms  DeleteObjects: 0.051900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 196.601078 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx
-  artifactKey: Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx using Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f592fc3466d24375dd6343ee94150bf9') in 0.026588 seconds
-  Import took 0.029210 seconds .
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1977.
+Total: 4.457500 ms (FindLiveObjects: 0.537700 ms CreateObjectMapping: 0.133900 ms MarkObjects: 3.663500 ms  DeleteObjects: 0.119800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005070 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx
-  artifactKey: Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/xbot@Jump Backward.fbx using Guid(21cb5cfca7af17d478c483386d5ee5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f592fc3466d24375dd6343ee94150bf9') in 0.005645 seconds
-  Import took 0.008007 seconds .
+  Time since last request: 1077.919985 seconds.
+  path: Assets/Models/FX
+  artifactKey: Guid(85a4b803462af4449a298e59b1cfbd71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX using Guid(85a4b803462af4449a298e59b1cfbd71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a9f3ebce0dc54e25cc880caa9db9171') in 0.013107 seconds
+  Import took 0.016212 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 215.970029 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Orc Idle.fbx
-  artifactKey: Guid(5363b3df2f94919488f034b0877fa183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Orc Idle.fbx using Guid(5363b3df2f94919488f034b0877fa183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94586de0224cb6854be01ea90c55ae3') in 0.021705 seconds
-  Import took 0.026452 seconds .
+  Time since last request: 4.336613 seconds.
+  path: Assets/Models/FX/JMO Assets
+  artifactKey: Guid(0754d1afcaccba4448afb129e32e48f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets using Guid(0754d1afcaccba4448afb129e32e48f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd46173441765c0a8c1086eb1b791cfad') in 0.007847 seconds
+  Import took 0.010528 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005585 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Orc Idle.fbx
-  artifactKey: Guid(5363b3df2f94919488f034b0877fa183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Orc Idle.fbx using Guid(5363b3df2f94919488f034b0877fa183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94586de0224cb6854be01ea90c55ae3') in 0.011269 seconds
-  Import took 0.015557 seconds .
+  Time since last request: 1.099742 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX
+  artifactKey: Guid(c865e48369a325f4784ecd8444d1ec51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX using Guid(c865e48369a325f4784ecd8444d1ec51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09b911dfcf6fe71cd848d4207fa7a925') in 0.007787 seconds
+  Import took 0.010230 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.942910 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Orc Idle.fbx
-  artifactKey: Guid(5363b3df2f94919488f034b0877fa183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Orc Idle.fbx using Guid(5363b3df2f94919488f034b0877fa183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5643beaa79f738ae8fdc61783a1e10ca') in 0.006974 seconds
-  Import took 0.009635 seconds .
+  Time since last request: 1.263275 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs
+  artifactKey: Guid(f348a2fb2f8a7fe4e82fb08818415884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs using Guid(f348a2fb2f8a7fe4e82fb08818415884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be9d72ef23e0f38b216e7162a8589dd') in 0.007592 seconds
+  Import took 0.010043 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 224.260309 seconds.
-  path: Assets/Models/Robot Kyle/Model/Animations/Humanoid.controller
-  artifactKey: Guid(0d65310a6a6691b4bbe67fe2bd41c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Robot Kyle/Model/Animations/Humanoid.controller using Guid(0d65310a6a6691b4bbe67fe2bd41c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a3976d3461da37dcf852c05cf6d9684') in 0.053752 seconds
-  Import took 0.057104 seconds .
+  Time since last request: 0.000463 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs
+  artifactKey: Guid(f348a2fb2f8a7fe4e82fb08818415884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs using Guid(f348a2fb2f8a7fe4e82fb08818415884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be9d72ef23e0f38b216e7162a8589dd') in 0.003030 seconds
+  Import took 0.005219 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.570376 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Humanoid.controller
-  artifactKey: Guid(b3b25a69fca7738418d3a95e3059e1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Humanoid.controller using Guid(b3b25a69fca7738418d3a95e3059e1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62337e1b190e77a96c04877dd8e7a28c') in 0.052521 seconds
-  Import took 0.055389 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001563 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.054 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.1 MB.
-System memory in use after: 86.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1931.
-Total: 3.088800 ms (FindLiveObjects: 0.305700 ms CreateObjectMapping: 0.081300 ms MarkObjects: 2.617700 ms  DeleteObjects: 0.081900 ms)
+  Time since last request: 2.904329 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs/Electric
+  artifactKey: Guid(715add6d7a2eff443bf0aee3cf26e7fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs/Electric using Guid(715add6d7a2eff443bf0aee3cf26e7fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b66a5744f36d8e79a91d37baca6ee9') in 0.007867 seconds
+  Import took 0.048846 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 312.188451 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Jump.fbx
-  artifactKey: Guid(9e379c60e7fb9f945b54f40b41b47e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Jump.fbx using Guid(9e379c60e7fb9f945b54f40b41b47e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284609710b9e6fc34f10ee63d9e634d4') in 0.044084 seconds
-  Import took 0.048859 seconds .
+  Time since last request: 0.063558 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs/Electric/CFX_ElectricityBall.prefab
+  artifactKey: Guid(77ec3c4e07a36814fb3169ecef41b50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX Prefabs/Electric/CFX_ElectricityBall.prefab using Guid(77ec3c4e07a36814fb3169ecef41b50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbeb4ce2a0d56b827dc11106b6fca9c0') in 0.031984 seconds
+  Import took 0.034642 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.843068 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Jump.fbx
-  artifactKey: Guid(9e379c60e7fb9f945b54f40b41b47e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Jump.fbx using Guid(9e379c60e7fb9f945b54f40b41b47e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8ade4dc388cdb08f5fb0eed9e995ed4') in 0.009243 seconds
-  Import took 0.013998 seconds .
+  Time since last request: 1.057606 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Animated/CFX_Anim_Electricity_Add.mat
+  artifactKey: Guid(fcb97c6faf083ca4f978210036f3832b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Animated/CFX_Anim_Electricity_Add.mat using Guid(fcb97c6faf083ca4f978210036f3832b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f2c59a3682ba73ea57934c1ec6f505') in 0.086990 seconds
+  Import took 0.090472 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 388.882902 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Standing Jump Running To Run Forward.fbx
-  artifactKey: Guid(699b038bf59a573478fd39fd4f6d8b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Standing Jump Running To Run Forward.fbx using Guid(699b038bf59a573478fd39fd4f6d8b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b19d8906582bc2bd0d8178a5a1e2532c') in 0.011345 seconds
-  Import took 0.014067 seconds .
+  Time since last request: 0.001600 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Animated/CFX_Anim_Electricity_Add.mat
+  artifactKey: Guid(fcb97c6faf083ca4f978210036f3832b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Animated/CFX_Anim_Electricity_Add.mat using Guid(fcb97c6faf083ca4f978210036f3832b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f2c59a3682ba73ea57934c1ec6f505') in 0.010505 seconds
+  Import took 0.013327 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.972494 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Standing Jump Running To Run Forward.fbx
-  artifactKey: Guid(699b038bf59a573478fd39fd4f6d8b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Standing Jump Running To Run Forward.fbx using Guid(699b038bf59a573478fd39fd4f6d8b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6f94164582828a906e25f485d0865a') in 0.006646 seconds
-  Import took 0.009434 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000788 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.828 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.1 MB.
-System memory in use after: 86.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1934.
-Total: 1.914100 ms (FindLiveObjects: 0.162700 ms CreateObjectMapping: 0.037500 ms MarkObjects: 1.654000 ms  DeleteObjects: 0.058700 ms)
+  Time since last request: 10.320939 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX2 Prefabs
+  artifactKey: Guid(84d86077ce20b3d408f08f7cc5cfb4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX2 Prefabs using Guid(84d86077ce20b3d408f08f7cc5cfb4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b8050f1d386bea0e13b753690b1a77') in 0.008086 seconds
+  Import took 0.011617 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 256.320089 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx
-  artifactKey: Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx using Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159c6effcfe62f730bc87ade3f543028') in 0.044943 seconds
-  Import took 0.049946 seconds .
+  Time since last request: 0.000929 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX2 Prefabs
+  artifactKey: Guid(84d86077ce20b3d408f08f7cc5cfb4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX2 Prefabs using Guid(84d86077ce20b3d408f08f7cc5cfb4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b8050f1d386bea0e13b753690b1a77') in 0.002876 seconds
+  Import took 0.005517 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 16.280046 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx
-  artifactKey: Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx using Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82aa501aa259916d2edd1a816120e2e5') in 0.010973 seconds
-  Import took 0.015494 seconds .
+  Time since last request: 7.328841 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs
+  artifactKey: Guid(9358d72e9ab0589469b7c81a782cb400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs using Guid(9358d72e9ab0589469b7c81a782cb400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da496aa985e061eff7ca4ec7e31889ed') in 0.007799 seconds
+  Import took 0.010352 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005218 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx
-  artifactKey: Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx using Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82aa501aa259916d2edd1a816120e2e5') in 0.010535 seconds
-  Import took 0.014771 seconds .
+  Time since last request: 0.000382 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs
+  artifactKey: Guid(9358d72e9ab0589469b7c81a782cb400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs using Guid(9358d72e9ab0589469b7c81a782cb400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da496aa985e061eff7ca4ec7e31889ed') in 0.002838 seconds
+  Import took 0.004969 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.520390 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx
-  artifactKey: Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Ch42_nonPBR@Falling To Landing.fbx using Guid(bbfbbbba6082bc64d92fbad31f65932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdc5aa46c3853dcab6b6bacfe6f01442') in 0.009643 seconds
-  Import took 0.014157 seconds .
+  Time since last request: 1.129754 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire
+  artifactKey: Guid(5d25cb644a933ed4bad4bc0b015fa1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire using Guid(5d25cb644a933ed4bad4bc0b015fa1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d84509dfa80277f94af6da8d20896f') in 0.008054 seconds
+  Import took 0.010622 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 97.212270 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Humanoid.controller
-  artifactKey: Guid(b3b25a69fca7738418d3a95e3059e1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Humanoid.controller using Guid(b3b25a69fca7738418d3a95e3059e1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'decf0c1ff4c8fcb83e6868d09a53ab04') in 0.065327 seconds
-  Import took 0.069858 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001304 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.058 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1414 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.1 MB.
-System memory in use after: 86.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1937.
-Total: 3.235600 ms (FindLiveObjects: 0.452400 ms CreateObjectMapping: 0.072000 ms MarkObjects: 2.600700 ms  DeleteObjects: 0.108000 ms)
+  Time since last request: 0.067630 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire/CFX3_Fire_Explosion.prefab
+  artifactKey: Guid(7e48ba6b1b968764490bbc70b66e3fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire/CFX3_Fire_Explosion.prefab using Guid(7e48ba6b1b968764490bbc70b66e3fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93495b91ab8e6b7aac943b8019582713') in 0.010382 seconds
+  Import took 0.013328 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 124.912471 seconds.
-  path: Assets/Models/Characters/Male_01/Animations/Action Adventure Pack.zip
-  artifactKey: Guid(56a08259caf23d54192347b175ea4016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Male_01/Animations/Action Adventure Pack.zip using Guid(56a08259caf23d54192347b175ea4016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '976dafc16af5cc0b2d82a2a764e06635') in 0.035456 seconds
-  Import took 0.039531 seconds .
+  Time since last request: 0.000229 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire/CFX3_Fire_Shield.prefab
+  artifactKey: Guid(b0bc1b6b391734647b9bb142bafc0819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire/CFX3_Fire_Shield.prefab using Guid(b0bc1b6b391734647b9bb142bafc0819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd055ee47502e8090590025cff178c1a') in 0.011029 seconds
+  Import took 0.013789 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire/CFX3_Flying_Ember_Upward.prefab
+  artifactKey: Guid(f89732ea99785b94c87bbba1e27f75a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX3 Prefabs/Fire/CFX3_Flying_Ember_Upward.prefab using Guid(f89732ea99785b94c87bbba1e27f75a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9789c31d6e97fbe209b94f7276ba8526') in 0.011947 seconds
+  Import took 0.014402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.179743 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Fire/CFX3_FireBulk ADD.mat
+  artifactKey: Guid(67c3db2f0d5b4aa4eaa1d7aec0699d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Fire/CFX3_FireBulk ADD.mat using Guid(67c3db2f0d5b4aa4eaa1d7aec0699d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681c54bbbbe8911c563cc811038c459e') in 0.031481 seconds
+  Import took 0.048867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.355275 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Light/CFX3_GlowDot ADDSOFT.mat
+  artifactKey: Guid(b692d0ba979c41946bbe57f2baba17eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Light/CFX3_GlowDot ADDSOFT.mat using Guid(b692d0ba979c41946bbe57f2baba17eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c783ef6d0fce1da74507e76ac5e8c645') in 0.036643 seconds
+  Import took 0.070537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.679014 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX Easy Editor
+  artifactKey: Guid(7a7171bf41aeb6949b08451fbcd42dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX Easy Editor using Guid(7a7171bf41aeb6949b08451fbcd42dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf1fee4c0856ac148cb853f31b002cf') in 0.007787 seconds
+  Import took 0.010255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000532 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX Easy Editor
+  artifactKey: Guid(7a7171bf41aeb6949b08451fbcd42dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX Easy Editor using Guid(7a7171bf41aeb6949b08451fbcd42dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf1fee4c0856ac148cb853f31b002cf') in 0.003707 seconds
+  Import took 0.006102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.919897 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs
+  artifactKey: Guid(1a4ce55e5c136214387f9cd6fc355972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs using Guid(1a4ce55e5c136214387f9cd6fc355972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a8dd3e2b31cd2fc72d96eaaae747342') in 0.009332 seconds
+  Import took 0.012351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs
+  artifactKey: Guid(1a4ce55e5c136214387f9cd6fc355972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs using Guid(1a4ce55e5c136214387f9cd6fc355972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a8dd3e2b31cd2fc72d96eaaae747342') in 0.003228 seconds
+  Import took 0.005489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.139584 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs/Fire
+  artifactKey: Guid(24d421782bd1bf84297d95935a0f0ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs/Fire using Guid(24d421782bd1bf84297d95935a0f0ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd7eb1a848ff144d8e795766e23bc49') in 0.003130 seconds
+  Import took 0.005922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.479093 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs/Fire/CFX4 Fire.prefab
+  artifactKey: Guid(1c20c7996d683754db1f0f62a361952c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/CFX4 Prefabs/Fire/CFX4 Fire.prefab using Guid(1c20c7996d683754db1f0f62a361952c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac01ef7414e383e36d4026f22c2efbae') in 0.009729 seconds
+  Import took 0.012355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.398558 seconds.
+  path: Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Fire/CFX4_FireBulk AddSoft.mat
+  artifactKey: Guid(53e601bdd2cb5434e96ec915a4e30792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Cartoon FX/Materials/Fire/CFX4_FireBulk AddSoft.mat using Guid(53e601bdd2cb5434e96ec915a4e30792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6702fc2ab8cfb725f018cf01f6c929dc') in 0.016131 seconds
+  Import took 0.074272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.834965 seconds.
+  path: Assets/Models/FX/JMO Assets/Editor
+  artifactKey: Guid(632cca2d5218983499321573c76c8e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Editor using Guid(632cca2d5218983499321573c76c8e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ebf08bdb6d13898c48af01a98e533a') in 0.008686 seconds
+  Import took 0.011564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000900 seconds.
+  path: Assets/Models/FX/JMO Assets/Editor
+  artifactKey: Guid(632cca2d5218983499321573c76c8e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Editor using Guid(632cca2d5218983499321573c76c8e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ebf08bdb6d13898c48af01a98e533a') in 0.004004 seconds
+  Import took 0.006693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.906689 seconds.
+  path: Assets/Models/FX/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll
+  artifactKey: Guid(e0fd66b536db819448c4cc1cf0c1d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll using Guid(e0fd66b536db819448c4cc1cf0c1d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aef53441bfe4d040e4c10b30816ca49') in 0.012951 seconds
+  Import took 0.015596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003198 seconds.
+  path: Assets/Models/FX/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll
+  artifactKey: Guid(e0fd66b536db819448c4cc1cf0c1d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/FX/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll using Guid(e0fd66b536db819448c4cc1cf0c1d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aef53441bfe4d040e4c10b30816ca49') in 0.003097 seconds
+  Import took 0.005395 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

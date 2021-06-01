@@ -160,11 +160,12 @@ public class PlayerLocomotion : MonoBehaviour
             }
         }
 
+
     }
 
     public void HandleJumping()
     {
-        if (isGrounded && !playerManager.isUsingRootMotion)
+        if (isGrounded && !playerManager.isUsingRootMotion && !playerManager.isInteracting)
         {
             animatorManager.animator.SetBool("isJumping", true);
             animatorManager.PlayTargetAnimation("Jump", false);

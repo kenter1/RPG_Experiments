@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1690026665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1690026666}
+  m_Layer: 0
+  m_Name: Left Hand Override
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1690026666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690026665}
+  m_LocalRotation: {x: -0.17999719, y: -0.08980621, z: 0.3313839, w: 0.921803}
+  m_LocalPosition: {x: -0.192, y: -0.088, z: -0.003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8019963156069501569}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -15.803, y: -17.221, z: 41.954}
 --- !u!1 &41168833558439025
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8019963156069501569}
+  - component: {fileID: 3050501647924814861}
   m_Layer: 0
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
@@ -309,9 +340,26 @@ Transform:
   - {fileID: 8400118227655482055}
   - {fileID: 7966744929767493405}
   - {fileID: 8322358871164310292}
+  - {fileID: 1690026666}
   m_Father: {fileID: 6027933147750916539}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3050501647924814861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797563872791123598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea64a28d742964082bc09e1f6fd086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentOverride: {fileID: 1690026666}
+  isLeftHandSlot: 1
+  isRightHandSlot: 0
+  currentWeaponModel: {fileID: 0}
 --- !u!1 &846914788724641808
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +410,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ac1e3da2d51ca84990342305c5cfd45, type: 2}
+  - {fileID: 2100000, guid: 33e524b2c7c45cb4598e3eb143efc76f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -548,6 +596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3226101128680120458}
+  - component: {fileID: 3574573196772491458}
   m_Layer: 0
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
@@ -574,6 +623,22 @@ Transform:
   m_Father: {fileID: 1649333143661751018}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3574573196772491458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215800829994005059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea64a28d742964082bc09e1f6fd086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentOverride: {fileID: 3226101128680120458}
+  isLeftHandSlot: 0
+  isRightHandSlot: 1
+  currentWeaponModel: {fileID: 0}
 --- !u!1 &1255055439180728731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1398,10 @@ GameObject:
   - component: {fileID: 5791197490083207339}
   - component: {fileID: 5791197490083207338}
   - component: {fileID: 5791197490083207343}
+  - component: {fileID: 7232738274590861450}
+  - component: {fileID: 7232738274590861451}
+  - component: {fileID: 7232738274590861452}
+  - component: {fileID: 1215945077}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1394,6 +1463,8 @@ MonoBehaviour:
   b_Input: 0
   jump_Input: 0
   x_Input: 0
+  rb_Input: 0
+  rt_Input: 0
 --- !u!54 &3877886202731532961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1421,9 +1492,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.17
-  m_Height: 1.6
+  m_Height: 1.8132055
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.8933972, z: 0}
 --- !u!95 &5791197490083207337
 Animator:
   serializedVersion: 3
@@ -1459,7 +1530,7 @@ MonoBehaviour:
   inAirTimer: 0
   fallingVelocity: 33
   leapingVelocity: 3
-  rayCastHeightOffSet: 0.5
+  rayCastHeightOffSet: 0.75
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -1499,6 +1570,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+--- !u!114 &7232738274590861450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979804882874079755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ed80109dbe0b5468bafddf2291d0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightWeapon: {fileID: 11400000, guid: 9b5e1656156682b4cac22dd99e2a61e5, type: 2}
+  leftWeapon: {fileID: 11400000, guid: 9b5e1656156682b4cac22dd99e2a61e5, type: 2}
+--- !u!114 &7232738274590861451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979804882874079755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4ea1f9d6fd64540b7bd46a9047a150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7232738274590861452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979804882874079755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f657f3956d0fd41a4f5349befbff59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1215945077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979804882874079755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c12000a853243048a83fd2dfc298125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthLevel: 10
+  maxHealth: 0
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!1 &5196222262714029436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2231,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a2a8ef94bf67c9e42b14aa641c0de40c, type: 2}
+  - {fileID: 2100000, guid: e7eaac3929b974541b3ecb4c9852e905, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

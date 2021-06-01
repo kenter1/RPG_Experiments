@@ -136,8 +136,14 @@ public class InputManager : MonoBehaviour
         if (rt_Input)
         {
             rt_Input = false;
-
-            playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+            if (movementInput.magnitude >= 1)
+            {
+                playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon, true);
+            }
+            else
+            {
+                playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+            }
         }
         else if (rb_Input)
         {
