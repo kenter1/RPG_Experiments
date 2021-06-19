@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class WeaponSlotManager : MonoBehaviour
 {
-    WeaponHolderSlot leftHandSlot;
-    WeaponHolderSlot rightHandSlot;
+    private WeaponHolderSlot leftHandSlot;
+    private WeaponHolderSlot rightHandSlot;
 
-    DamageCollider leftHandDamageCollider;
-    DamageCollider rightHandDamageCollider;
+    private DamageCollider leftHandDamageCollider;
+    private DamageCollider rightHandDamageCollider;
 
+    public WeaponItem attackingWeapon;
+
+    private Animator animator;
+
+    private QuickSlotsUI quickSlotsUI;
+
+    PlayerStats PlayerStats;
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
+        PlayerStats = GetComponent<PlayerStats>();
+
         WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
         foreach(WeaponHolderSlot weaponSlot in weaponHolderSlots)
         {
@@ -32,11 +43,33 @@ public class WeaponSlotManager : MonoBehaviour
         {
             leftHandSlot.LoadWeaponModel(weaponItem);
             LoadLeftWeaponDamageCollider();
+
+            #region Handle Left Weapon Idle Animations
+            if (weaponItem != null)
+            {
+                animator.CrossFade(weaponItem.Left_Handle_Idle, 0.2f);
+            }
+            else
+            {
+                animator.CrossFade("Left Arm Empty", 0.2f);
+            }
+            #endregion
         }
         else
         {
             rightHandSlot.LoadWeaponModel(weaponItem);
             LoadRightWeaponDamageCollider();
+            //quickSlotsUI.UpdateWeaponQuickSlotsUI(weaponItem, 1);
+            #region Handle Right Weapon Idle Animations
+            if (weaponItem != null)
+            {
+                animator.CrossFade(weaponItem.Right_Hand_Idle, 0.2f);
+            }
+            else
+            {
+                animator.CrossFade("Right Arm Empty", 0.2f);
+            }
+            #endregion
         }
     }
 
@@ -72,5 +105,15 @@ public class WeaponSlotManager : MonoBehaviour
     }
     #endregion
 
+    #region Handle Weapon's Stamina Drainage
+    public void DrainStaminaLightAttack()
+    {
+        PlayerStats.TakeStaminaDamage(Mathf.RoundToInt(attackingWeapon.baseStamina * attackingWeapon.lightAttackMultiplier));
+    }
 
+    public void DrainStaminaHeavyAttack()
+    {
+        PlayerStats.TakeStaminaDamage(Mathf.RoundToInt(attackingWeapon.baseStamina * attackingWeapon.heavyAttackMultiplier));
+    }
+    #endregion
 }

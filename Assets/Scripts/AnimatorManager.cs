@@ -96,4 +96,14 @@ public class AnimatorManager : MonoBehaviour
             playerLocomotion.playerRigidBody.velocity = velocity;
         }
     }
+
+    public void EnableCombo()
+    {
+        animator.SetBool("canDoCombo", true);
+    }
+
+    public void DisableCombo()
+    {
+        animator.SetBool("canDoCombo", false);
+    }
 }

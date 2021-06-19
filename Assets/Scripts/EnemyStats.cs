@@ -7,6 +7,7 @@ public class EnemyStats : MonoBehaviour
     public int healthLevel = 10;
     public int maxHealth;
     public int currentHealth;
+    public bool isDead;
 
     private Animator animator;
 
@@ -30,13 +31,16 @@ public class EnemyStats : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
-     
-        animator.Play("Damage_01");
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
+            isDead = true;
             currentHealth = 0;
             animator.Play("Death_01");
+        }
+        else if(!isDead)
+        {
+            animator.Play("Damage_01");
         }
     }
 }

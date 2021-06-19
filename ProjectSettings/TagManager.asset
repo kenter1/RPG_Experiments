@@ -6,15 +6,18 @@ TagManager:
   tags:
   - Hittable
   - Enemy
+  - FxTemporaire
+  - Interactable
+  - Object
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Interactable
+  - Object
   - 
   - 
   - 

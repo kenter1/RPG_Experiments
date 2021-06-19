@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6666f881507b554a955c70389d3d04a, type: 3}
+  m_Name: Sword_Holy
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 21300000, guid: d76860308e9981d4a8b02a91a3a20fe4, type: 3}
+  itemName: Sword
+  modelPrefab: {fileID: 5463515346747123136, guid: 891c48b7dfa07794db2164fd02dd7f5b, type: 3}
+  isUnarmed: 0
+  Right_Hand_Idle: Right_Arm_Idle_01
+  Left_Handle_Idle: Left_Arm_Idle_01
+  OH_Light_Attack_1: OH_Light_Attack_01
+  OH_Light_Attack_2: OH_Light_Attack_02
+  OH_Heavy_Attack_1: OH_Heavy_Attack_01
+  OH_Heavy_Attack_2: OH_Heavy_Attack_03
+  OH_Run_Attack_01: OH_Run_Attack_01
+  OH_Run_Attack_02: OH_Run_Attack_02
+  baseStamina: 20
+  lightAttackMultiplier: 1
+  heavyAttackMultiplier: 1.5

@@ -9,6 +9,8 @@ public class InputManager : MonoBehaviour
     private AnimatorManager animatorManager;
     private PlayerAttacker playerAttacker;
     private PlayerInventory playerInventory;
+    private PlayerManager playerManager;
+    private UIManager uiManager;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -20,6 +22,7 @@ public class InputManager : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
 
+    public bool a_Input;
     public bool b_Input;
     public bool jump_Input;
     public bool x_Input;
@@ -27,12 +30,28 @@ public class InputManager : MonoBehaviour
     public bool rb_Input;
     public bool rt_Input;
 
+    public bool quickslot1_Input;
+    public bool quickslot2_Input;
+    public bool quickslot3_Input;
+    public bool quickslot4_Input;
+
+    public bool inventory_Input;
+    public bool options_Input;
+
+
+    public bool inventoryFlag;
+    public bool optionFlag;
+    public bool comboFlag;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
         playerAttacker = GetComponent<PlayerAttacker>();
         playerInventory = GetComponent<PlayerInventory>();
+        playerManager = GetComponent<PlayerManager>();
+        uiManager = FindObjectOfType<UIManager>();
+
     }
 
     private void OnEnable()
@@ -48,8 +67,18 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
             playerControls.PlayerActions.X.performed += i => x_Input = true;
 
+            playerControls.PlayerActions.A.performed += i => a_Input = true;
+
             playerControls.PlayerActions.RB.performed += i => rb_Input = true;
             playerControls.PlayerActions.RT.performed += i => rt_Input = true;
+
+            playerControls.PlayerActions.Quickslot1.performed += i => quickslot1_Input = true;
+            playerControls.PlayerActions.Quickslot2.performed += i => quickslot2_Input = true;
+            playerControls.PlayerActions.Quickslot3.performed += i => quickslot3_Input = true;
+            playerControls.PlayerActions.Quickslot4.performed += i => quickslot4_Input = true;
+
+            playerControls.PlayerActions.Inventory.performed += i => inventory_Input = true;
+            playerControls.PlayerActions.Options.performed += i => options_Input = true;
 
 
         }
@@ -64,12 +93,20 @@ public class InputManager : MonoBehaviour
 
     public void HandleAllInputs()
     {
-        HandleMovementInput();
-        HandleSprintingInput();
-        HandleJumpingInput();
-        HandleDodgeInput();
-        //HandleActionInput()
+        if (!uiManager.inventoryWindow.activeSelf)
+        {
+            HandleMovementInput();
+            HandleSprintingInput();
+            HandleJumpingInput();
+            HandleDodgeInput();
+            //HandleActionInput()
+            HandleQuickSlotsInput();
+            HandleInteractingButtonInput();
+        }
         HandleAttackInput();
+
+        HandleInventoryInput();
+        HandleOptionInput();
     }
 
     private void HandleMovementInput()
@@ -136,31 +173,157 @@ public class InputManager : MonoBehaviour
         if (rt_Input)
         {
             rt_Input = false;
-            if (movementInput.magnitude >= 1)
+            if (uiManager.inventoryWindow.activeSelf)
+            {
+                return;
+            }
+
+            if (playerLocomotion.isSprinting)
             {
                 playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon, true);
             }
-            else
+            else if (playerLocomotion.isGrounded)
             {
-                playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+                playerLocomotion.playerRigidBody.velocity = Vector3.zero; //Stops the player from moving while picking up an item
+                if (playerManager.canDoCombo)
+                {
+                    //Do Combo
+                    comboFlag = true;
+                    playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon, true);
+                    comboFlag = false;
+                }
+                else 
+                {
+                    //First Attack
+                    playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+                }
             }
         }
         else if (rb_Input)
         {
-            print("Speed while running: " + movementInput.magnitude);
+            //print("Speed while running: " + movementInput.magnitude);
             rb_Input = false;
-            if (movementInput.magnitude >= 1)
+            if (uiManager.inventoryWindow.activeSelf)
+            {
+                return;
+            }
+
+            if (playerLocomotion.isSprinting)
             {
                 playerAttacker.HandleLightAttack(playerInventory.rightWeapon, true);
             }
-            else
+            else if(playerLocomotion.isGrounded)
             {
-                playerAttacker.HandleLightAttack(playerInventory.rightWeapon, false);
+                playerLocomotion.playerRigidBody.velocity = Vector3.zero; //Stops the player from moving while picking up an item
+                if (playerManager.canDoCombo)
+                {
+                    //Do Combo
+                    comboFlag = true;
+                    playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
+                    comboFlag = false;
+                }
+                else
+                {
+                    //First Attack
+                    playerAttacker.HandleLightAttack(playerInventory.rightWeapon, false);
+                }
             }
-            
 
-            
+
+
         }
 
     }
+
+    private void HandleQuickSlotsInput()
+    {
+        /*
+         Notes: Video EP. 14 Weapon Quick Slots: 
+            Link https://www.youtube.com/watch?v=qC9TPzXdxyk
+         */
+        if (!playerManager.isInteracting)
+        {
+            if (quickslot1_Input)
+            {
+                playerInventory.ChangeWeapon(0);
+            }
+            else if (quickslot2_Input)
+            {
+                playerInventory.ChangeWeapon(1);
+            }
+            else if (quickslot3_Input)
+            {
+                playerInventory.ChangeWeapon(2);
+            }
+            else if (quickslot4_Input)
+            {
+                playerInventory.ChangeWeapon(3);
+            }
+        }
+
+
+    }
+
+    private void HandleInteractingButtonInput()
+    {
+        if (a_Input)
+        {
+            //a_Input = false;
+            //Debug.Log("Press A Input");
+        }
+    }
+
+    private void HandleOptionInput()
+    {
+        if (options_Input)
+        {
+            
+
+            if (uiManager.inventoryWindow.activeSelf)
+            {
+                inventoryFlag = false;
+                uiManager.CloseInventoryWindow();
+                uiManager.hudWindow.SetActive(true);
+                optionFlag = false;
+            }
+            else
+            {
+                optionFlag = !optionFlag;
+            }
+
+            
+
+            if (optionFlag)
+            {
+                uiManager.OpenSelectWindow();
+            }
+            else
+            {
+                uiManager.CloseSelectWindow();
+            }
+
+ 
+        }
+
+    }
+    private void HandleInventoryInput()
+    {
+        if (inventory_Input)
+        {
+            inventoryFlag = !inventoryFlag;
+
+            if (inventoryFlag)
+            {
+                uiManager.OpenInventoryWindow();
+                uiManager.UpdateUI();
+                uiManager.hudWindow.SetActive(false);
+            }
+            else
+            {
+                uiManager.CloseInventoryWindow();
+                uiManager.hudWindow.SetActive(true);
+            }
+        }
+    }
+
 }
