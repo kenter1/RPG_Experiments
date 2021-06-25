@@ -6,7 +6,9 @@ using System;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private WeaponSlotManager weaponSlotManager;
+    public WeaponSlotManager weaponSlotManager;
+    private ApplyEffect applyEffect;
+
     public WeaponItem rightWeapon;
     public WeaponItem leftWeapon;
 
@@ -26,6 +28,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Awake()
     {
+        applyEffect = GetComponent<ApplyEffect>();
         weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
         quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
         //quickSlotsUI.LoadQuickSlotIcons(weaponsInRightHandSlots);
@@ -39,7 +42,6 @@ public class PlayerInventory : MonoBehaviour
     {
         rightWeapon = unarmedWeapon;
         leftWeapon = unarmedWeapon;
-
     }
 
 
@@ -79,6 +81,7 @@ public class PlayerInventory : MonoBehaviour
             currentRightWeaponIndex = slot;
             rightWeapon = (WeaponItem)quickSlotItems[currentRightWeaponIndex];
             weaponSlotManager.LoadWeaponOnSlot((WeaponItem)quickSlotItems[currentRightWeaponIndex], false);
+
         }
 
     }

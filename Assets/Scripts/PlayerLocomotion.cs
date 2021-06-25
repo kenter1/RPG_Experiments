@@ -7,9 +7,12 @@ public class PlayerLocomotion : MonoBehaviour
     private PlayerManager playerManager;
     private AnimatorManager animatorManager;
     private InputManager inputManager;
+    private PlayerAttacker playerAttacker;
 
     private Vector3 moveDirection;
     private Transform cameraObject;
+    private CapsuleCollider capsuleCollider;
+
     public Rigidbody playerRigidBody;
 
     [Header("Falling")]
@@ -33,6 +36,7 @@ public class PlayerLocomotion : MonoBehaviour
     public bool isGrounded;
     public bool isJumping;
     public bool isInAir;
+    public bool rollingFlag;
 
     [Header("Movement Speeds")]
     public float walkingSpeed = 1.5f;
@@ -48,18 +52,64 @@ public class PlayerLocomotion : MonoBehaviour
     Vector3 normalVector;
     Vector3 targetPosition;
 
+    private bool toggleCollider;
 
     private void Awake()
     {
+        playerAttacker = GetComponent<PlayerAttacker>();
         playerManager = GetComponent<PlayerManager>();
         animatorManager = GetComponent<AnimatorManager>();
         inputManager = GetComponent<InputManager>();
         playerRigidBody = GetComponent<Rigidbody>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
+
         cameraObject = Camera.main.transform;
 
         isGrounded = true;
         //ignoreForGroundCheck = ~(1 << 8 | 1 << 11);
+        
     }
+
+    private void LateUpdate()
+    {
+        StartCoroutine(waiter());
+    }
+
+    private void LongCollider()
+    {
+        capsuleCollider.height = 1.7f;
+        capsuleCollider.center = new Vector3(0, 0.922716f, 0);
+    }
+
+    private void ShortCollider()
+    {
+        capsuleCollider.center = new Vector3(0, 1.146192f, 0);
+        capsuleCollider.height = 1.3f;
+    }
+
+    IEnumerator waiter()
+    {
+
+        if(isGrounded == false && toggleCollider == false)
+        {
+            LongCollider();
+            toggleCollider = true;
+            yield return new WaitForSeconds(3.0f);
+            toggleCollider = false;
+        }
+        else if(isGrounded == true && toggleCollider == false)
+        {
+            ShortCollider();
+            toggleCollider = true;
+            yield return new WaitForSeconds(0.1f);
+            toggleCollider = false;
+        }
+
+
+
+        //Debug.Log("IS this even working?");
+    }
+
 
     public void HandleAllMovement()
     {
@@ -83,6 +133,11 @@ public class PlayerLocomotion : MonoBehaviour
         moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput;
         moveDirection.Normalize();
         moveDirection.y = 0;
+
+        if (isGrounded)
+        {
+            ShortCollider();
+        }
 
         if (isSprinting)
         {
@@ -231,6 +286,7 @@ public class PlayerLocomotion : MonoBehaviour
             playerRigidBody.AddForce(-Vector3.up * fallingVelocity * inAirTimer);
         }
 
+        Debug.DrawRay(rayCastOrigin, -Vector3.up * minimumDistanceNeededToBeginFall, Color.red, 0.1f, true);
         //if (Physics.SphereCast(rayCastOrigin, 0.2f, Vector3.down, out hit, groundLayer))
         if (Physics.Raycast(rayCastOrigin, -Vector3.up, out hit, minimumDistanceNeededToBeginFall, ignoreForGroundCheck))
         {
@@ -244,11 +300,12 @@ public class PlayerLocomotion : MonoBehaviour
             inAirTimer = 0;
             
             isGrounded = true;
-   
         }
         else
         {
             isGrounded = false;
+
+
         }
 
         if(isGrounded && !isJumping)
@@ -280,24 +337,32 @@ public class PlayerLocomotion : MonoBehaviour
         }
     }
 
+    public void OpenRolling()
+    {
+        rollingFlag = true;
+    }
+
+    public void CloseRolling()
+    {
+        rollingFlag = false;
+    }
+
     public void HandleDodge()
     {
-        if (playerManager.isInteracting || !isGrounded)
+        if (!isGrounded || rollingFlag)
         {
             return;
         }
-
         animatorManager.PlayTargetAnimation("Dodge", true, true);
         //Toggle Invulnerable bool for no hp damage during animation
     }
 
     public void HandleRolling()
     {
-        if (playerManager.isInteracting || !isGrounded)
+        if (!isGrounded || rollingFlag)
         {
             return;
         }
-
         animatorManager.PlayTargetAnimation("Rolling", true, true);
         moveDirection = cameraObject.forward * inputManager.verticalInput;
         moveDirection += cameraObject.right * inputManager.horizontalInput;

@@ -5,10 +5,12 @@ using UnityEngine;
 public class WeaponSlotManager : MonoBehaviour
 {
     private WeaponHolderSlot leftHandSlot;
-    private WeaponHolderSlot rightHandSlot;
+    public WeaponHolderSlot rightHandSlot;
 
-    private DamageCollider leftHandDamageCollider;
-    private DamageCollider rightHandDamageCollider;
+    public DamageCollider leftHandDamageCollider;
+    public DamageCollider rightHandDamageCollider;
+
+    public bool attackingFlag;
 
     public WeaponItem attackingWeapon;
 
@@ -86,22 +88,26 @@ public class WeaponSlotManager : MonoBehaviour
 
     public void OpenRightDamageCollider()
     {
+        attackingFlag = true;
         rightHandDamageCollider.EnableDamageCollider();
     }
 
     public void OpenLeftDamageCollider()
     {
+        attackingFlag = true;
         leftHandDamageCollider.EnableDamageCollider();
     }
 
     public void CloseRightDamageCollider()
     {
         rightHandDamageCollider.DisableDamageCollider();
+        attackingFlag = false;
     }
 
     public void CloseLeftDamageCollider()
     {
         leftHandDamageCollider.DisableDamageCollider();
+        attackingFlag = false;
     }
     #endregion
 

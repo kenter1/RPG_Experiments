@@ -10,7 +10,10 @@ public class InputManager : MonoBehaviour
     private PlayerAttacker playerAttacker;
     private PlayerInventory playerInventory;
     private PlayerManager playerManager;
+    private WeaponSlotManager weaponSlotManager;
     private UIManager uiManager;
+    private CameraManager cameraManager;
+    private ApplyEffect applyEffect;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -38,19 +41,29 @@ public class InputManager : MonoBehaviour
     public bool inventory_Input;
     public bool options_Input;
 
+    public bool lockOnInput;
+    public bool lockOnLeftInput;
+    public bool lockOnRightInput;
+
+    public bool effectInput;
+    public bool initEffectFlag = true;
 
     public bool inventoryFlag;
     public bool optionFlag;
     public bool comboFlag;
+    public bool lockOnFlag;
 
     private void Awake()
     {
+        weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
         playerAttacker = GetComponent<PlayerAttacker>();
         playerInventory = GetComponent<PlayerInventory>();
         playerManager = GetComponent<PlayerManager>();
         uiManager = FindObjectOfType<UIManager>();
+        cameraManager = FindObjectOfType<CameraManager>();
+        applyEffect = GetComponent<ApplyEffect>();
 
     }
 
@@ -67,7 +80,7 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
             playerControls.PlayerActions.X.performed += i => x_Input = true;
 
-            playerControls.PlayerActions.A.performed += i => a_Input = true;
+            playerControls.PlayerActions.Interact.performed += i => a_Input = true;
 
             playerControls.PlayerActions.RB.performed += i => rb_Input = true;
             playerControls.PlayerActions.RT.performed += i => rt_Input = true;
@@ -80,6 +93,11 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.Inventory.performed += i => inventory_Input = true;
             playerControls.PlayerActions.Options.performed += i => options_Input = true;
 
+            playerControls.PlayerActions.AutoLock.performed += i => lockOnInput = true;
+            playerControls.PlayerActions.LockOnLeftTarget.performed += i => lockOnLeftInput = true;
+            playerControls.PlayerActions.LockOnRightTarget.performed += i => lockOnRightInput = true;
+
+            playerControls.PlayerActions.Effect.performed += i => effectInput = true;
 
         }
 
@@ -99,9 +117,10 @@ public class InputManager : MonoBehaviour
             HandleSprintingInput();
             HandleJumpingInput();
             HandleDodgeInput();
-            //HandleActionInput()
             HandleQuickSlotsInput();
             HandleInteractingButtonInput();
+            HandleLockOnInput();
+            HandleEffectInput();
         }
         HandleAttackInput();
 
@@ -154,7 +173,9 @@ public class InputManager : MonoBehaviour
     {
         if (x_Input)
         {
-            x_Input = false;
+            //playerAttacker.weaponSlotManager.CloseLeftDamageCollider();
+            //playerAttacker.weaponSlotManager.CloseRightDamageCollider();
+            Debug.Log("WTH is going on");
             if (Mathf.Abs(movementInput.y) > 0 || Mathf.Abs(movementInput.x) > 0)
             {
                 playerLocomotion.HandleRolling();
@@ -163,6 +184,9 @@ public class InputManager : MonoBehaviour
             {
                 playerLocomotion.HandleDodge();
             }
+
+            x_Input = false;
+
         }
     }
 
@@ -323,6 +347,71 @@ public class InputManager : MonoBehaviour
                 uiManager.CloseInventoryWindow();
                 uiManager.hudWindow.SetActive(true);
             }
+        }
+    }
+
+    private void HandleLockOnInput()
+    {
+        if(lockOnInput && lockOnFlag == false)
+        {
+            lockOnInput = false;
+            cameraManager.HandleLockOn();
+            cameraManager.currentLockOnTarget = cameraManager.nearestLockOnTarget;
+            Debug.Log("Target: " + cameraManager.currentLockOnTarget.parent.name);
+            if(cameraManager.nearestLockOnTarget != null)
+            {
+                cameraManager.currentLockOnTarget = cameraManager.nearestLockOnTarget;
+                lockOnFlag = true;
+                Debug.Log("Target: " + cameraManager.currentLockOnTarget.parent.name);
+            }            
+        }
+        else if (lockOnInput && lockOnFlag)
+        {
+            lockOnInput = false;
+            lockOnFlag = false;
+            cameraManager.ClearLockOnTargets();
+
+        }
+
+        if(lockOnFlag && lockOnLeftInput)
+        {
+            lockOnLeftInput = false;
+            cameraManager.HandleLockOn();
+            if(cameraManager.leftLockTarget != null)
+            {
+                cameraManager.currentLockOnTarget = cameraManager.leftLockTarget;
+            }
+        }else if(lockOnFlag && lockOnRightInput)
+        {
+            lockOnRightInput = false;
+            cameraManager.HandleLockOn();
+            if (cameraManager.rightLockTarget != null)
+            {
+                cameraManager.currentLockOnTarget = cameraManager.rightLockTarget;
+            }
+        }
+
+    }
+
+    private void HandleEffectInput()
+    {
+
+        if (effectInput)
+        {
+            effectInput = false;
+            if (initEffectFlag || applyEffect.psUpdater == null)
+            {
+                applyEffect.ApplyOnWeapon(weaponSlotManager.rightHandSlot.currentWeaponModel.transform.GetChild(0).GetChild(0).gameObject);
+                initEffectFlag = false;
+            }
+            else
+            {
+                applyEffect.ToggleEffect();
+            }
+            //Debug.Log("Found: " + weaponSlotManager.rightHandSlot.currentWeaponModel.transform.GetChild(0).GetChild(0).name);
+            
+            
+     
         }
     }
 

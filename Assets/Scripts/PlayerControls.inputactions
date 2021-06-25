@@ -278,7 +278,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "A",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "e05c4901-27be-4284-9cbe-0b44ccd52217",
                     "expectedControlType": "Button",
@@ -297,6 +297,38 @@
                     "name": "Options",
                     "type": "Button",
                     "id": "64ebcf15-e759-4b36-b0ef-f59fbfbd2031",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AutoLock",
+                    "type": "Button",
+                    "id": "c901a9e0-6fee-4320-86d2-ca6b282d4ce8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "LockOnLeftTarget",
+                    "type": "Button",
+                    "id": "446d4550-6e19-42f2-99f6-41f0806ee733",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "LockOnRightTarget",
+                    "type": "Button",
+                    "id": "4a848f41-603d-4e03-9a22-7fb0e419a1e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Effect",
+                    "type": "Button",
+                    "id": "c2b91dc7-5da6-482c-a53c-ab036dd9fe9a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -508,7 +540,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "A",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -519,7 +551,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "A",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -555,9 +587,81 @@
                     "action": "Options",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "263a2c95-e013-4cb8-83f6-3e7d7dadf9fb",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AutoLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "624c3d61-32db-4927-8b66-13757167a8c8",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LockOnLeftTarget",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "494c6f9c-7409-48db-8336-0ce47dd54ddd",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LockOnLeftTarget",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "940653ef-a8d8-4fdc-8adc-d90598a3d3d2",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LockOnRightTarget",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75246311-dafd-40fc-ad16-4b06af907fdb",
+                    "path": "<Gamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LockOnRightTarget",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ddf7e3f5-3669-4173-9971-4213a842dd5f",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Effect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "All Control Schemes",
+            "bindingGroup": "All Control Schemes",
+            "devices": []
+        }
+    ]
 }

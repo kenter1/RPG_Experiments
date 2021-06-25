@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DamageCollider : MonoBehaviour
 {
-    private Collider damageCollider;
+    private BoxCollider damageCollider;
 
     public int currentWeaponDamage = 25;
 
     private void Awake()
     {
-        damageCollider = GetComponent<Collider>();
+        damageCollider = GetComponent<BoxCollider>();
         damageCollider.gameObject.SetActive(true);
         damageCollider.isTrigger = true;
         damageCollider.enabled = false;

@@ -8,7 +8,7 @@ public class PlayerAttacker : MonoBehaviour
     PlayerManager playerManager;
     PlayerLocomotion playerLocomotion;
     InputManager inputHandler;
-    WeaponSlotManager weaponSlotManager;
+    public WeaponSlotManager weaponSlotManager;
     public string lastAttack;
 
     private void Awake()

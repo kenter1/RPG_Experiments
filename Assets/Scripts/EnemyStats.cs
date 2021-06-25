@@ -40,7 +40,7 @@ public class EnemyStats : MonoBehaviour
         }
         else if(!isDead)
         {
-            animator.Play("Damage_01");
+            animator.Play("NPC_Damage_01");
         }
     }
 }

@@ -291,7 +291,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""A"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""e05c4901-27be-4284-9cbe-0b44ccd52217"",
                     ""expectedControlType"": ""Button"",
@@ -310,6 +310,38 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": ""Options"",
                     ""type"": ""Button"",
                     ""id"": ""64ebcf15-e759-4b36-b0ef-f59fbfbd2031"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""AutoLock"",
+                    ""type"": ""Button"",
+                    ""id"": ""c901a9e0-6fee-4320-86d2-ca6b282d4ce8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""LockOnLeftTarget"",
+                    ""type"": ""Button"",
+                    ""id"": ""446d4550-6e19-42f2-99f6-41f0806ee733"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""LockOnRightTarget"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a848f41-603d-4e03-9a22-7fb0e419a1e8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Effect"",
+                    ""type"": ""Button"",
+                    ""id"": ""c2b91dc7-5da6-482c-a53c-ab036dd9fe9a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -521,7 +553,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""A"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -532,7 +564,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""A"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -568,11 +600,83 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Options"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""263a2c95-e013-4cb8-83f6-3e7d7dadf9fb"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AutoLock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""624c3d61-32db-4927-8b66-13757167a8c8"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LockOnLeftTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""494c6f9c-7409-48db-8336-0ce47dd54ddd"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LockOnLeftTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""940653ef-a8d8-4fdc-8adc-d90598a3d3d2"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LockOnRightTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""75246311-dafd-40fc-ad16-4b06af907fdb"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LockOnRightTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ddf7e3f5-3669-4173-9971-4213a842dd5f"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Effect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""All Control Schemes"",
+            ""bindingGroup"": ""All Control Schemes"",
+            ""devices"": []
+        }
+    ]
 }");
         // Player Movement
         m_PlayerMovement = asset.FindActionMap("Player Movement", throwIfNotFound: true);
@@ -589,9 +693,13 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_PlayerActions_Quickslot2 = m_PlayerActions.FindAction("Quickslot2", throwIfNotFound: true);
         m_PlayerActions_Quickslot3 = m_PlayerActions.FindAction("Quickslot3", throwIfNotFound: true);
         m_PlayerActions_Quickslot4 = m_PlayerActions.FindAction("Quickslot4", throwIfNotFound: true);
-        m_PlayerActions_A = m_PlayerActions.FindAction("A", throwIfNotFound: true);
+        m_PlayerActions_Interact = m_PlayerActions.FindAction("Interact", throwIfNotFound: true);
         m_PlayerActions_Inventory = m_PlayerActions.FindAction("Inventory", throwIfNotFound: true);
         m_PlayerActions_Options = m_PlayerActions.FindAction("Options", throwIfNotFound: true);
+        m_PlayerActions_AutoLock = m_PlayerActions.FindAction("AutoLock", throwIfNotFound: true);
+        m_PlayerActions_LockOnLeftTarget = m_PlayerActions.FindAction("LockOnLeftTarget", throwIfNotFound: true);
+        m_PlayerActions_LockOnRightTarget = m_PlayerActions.FindAction("LockOnRightTarget", throwIfNotFound: true);
+        m_PlayerActions_Effect = m_PlayerActions.FindAction("Effect", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -691,9 +799,13 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerActions_Quickslot2;
     private readonly InputAction m_PlayerActions_Quickslot3;
     private readonly InputAction m_PlayerActions_Quickslot4;
-    private readonly InputAction m_PlayerActions_A;
+    private readonly InputAction m_PlayerActions_Interact;
     private readonly InputAction m_PlayerActions_Inventory;
     private readonly InputAction m_PlayerActions_Options;
+    private readonly InputAction m_PlayerActions_AutoLock;
+    private readonly InputAction m_PlayerActions_LockOnLeftTarget;
+    private readonly InputAction m_PlayerActions_LockOnRightTarget;
+    private readonly InputAction m_PlayerActions_Effect;
     public struct PlayerActionsActions
     {
         private @PlayerControls m_Wrapper;
@@ -707,9 +819,13 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Quickslot2 => m_Wrapper.m_PlayerActions_Quickslot2;
         public InputAction @Quickslot3 => m_Wrapper.m_PlayerActions_Quickslot3;
         public InputAction @Quickslot4 => m_Wrapper.m_PlayerActions_Quickslot4;
-        public InputAction @A => m_Wrapper.m_PlayerActions_A;
+        public InputAction @Interact => m_Wrapper.m_PlayerActions_Interact;
         public InputAction @Inventory => m_Wrapper.m_PlayerActions_Inventory;
         public InputAction @Options => m_Wrapper.m_PlayerActions_Options;
+        public InputAction @AutoLock => m_Wrapper.m_PlayerActions_AutoLock;
+        public InputAction @LockOnLeftTarget => m_Wrapper.m_PlayerActions_LockOnLeftTarget;
+        public InputAction @LockOnRightTarget => m_Wrapper.m_PlayerActions_LockOnRightTarget;
+        public InputAction @Effect => m_Wrapper.m_PlayerActions_Effect;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -746,15 +862,27 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Quickslot4.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnQuickslot4;
                 @Quickslot4.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnQuickslot4;
                 @Quickslot4.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnQuickslot4;
-                @A.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnA;
-                @A.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnA;
-                @A.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnA;
+                @Interact.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnInteract;
                 @Inventory.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnInventory;
                 @Inventory.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnInventory;
                 @Inventory.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnInventory;
                 @Options.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnOptions;
                 @Options.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnOptions;
                 @Options.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnOptions;
+                @AutoLock.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnAutoLock;
+                @AutoLock.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnAutoLock;
+                @AutoLock.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnAutoLock;
+                @LockOnLeftTarget.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOnLeftTarget;
+                @LockOnLeftTarget.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOnLeftTarget;
+                @LockOnLeftTarget.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOnLeftTarget;
+                @LockOnRightTarget.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOnRightTarget;
+                @LockOnRightTarget.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOnRightTarget;
+                @LockOnRightTarget.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOnRightTarget;
+                @Effect.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnEffect;
+                @Effect.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnEffect;
+                @Effect.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnEffect;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -786,19 +914,40 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Quickslot4.started += instance.OnQuickslot4;
                 @Quickslot4.performed += instance.OnQuickslot4;
                 @Quickslot4.canceled += instance.OnQuickslot4;
-                @A.started += instance.OnA;
-                @A.performed += instance.OnA;
-                @A.canceled += instance.OnA;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
                 @Inventory.started += instance.OnInventory;
                 @Inventory.performed += instance.OnInventory;
                 @Inventory.canceled += instance.OnInventory;
                 @Options.started += instance.OnOptions;
                 @Options.performed += instance.OnOptions;
                 @Options.canceled += instance.OnOptions;
+                @AutoLock.started += instance.OnAutoLock;
+                @AutoLock.performed += instance.OnAutoLock;
+                @AutoLock.canceled += instance.OnAutoLock;
+                @LockOnLeftTarget.started += instance.OnLockOnLeftTarget;
+                @LockOnLeftTarget.performed += instance.OnLockOnLeftTarget;
+                @LockOnLeftTarget.canceled += instance.OnLockOnLeftTarget;
+                @LockOnRightTarget.started += instance.OnLockOnRightTarget;
+                @LockOnRightTarget.performed += instance.OnLockOnRightTarget;
+                @LockOnRightTarget.canceled += instance.OnLockOnRightTarget;
+                @Effect.started += instance.OnEffect;
+                @Effect.performed += instance.OnEffect;
+                @Effect.canceled += instance.OnEffect;
             }
         }
     }
     public PlayerActionsActions @PlayerActions => new PlayerActionsActions(this);
+    private int m_AllControlSchemesSchemeIndex = -1;
+    public InputControlScheme AllControlSchemesScheme
+    {
+        get
+        {
+            if (m_AllControlSchemesSchemeIndex == -1) m_AllControlSchemesSchemeIndex = asset.FindControlSchemeIndex("All Control Schemes");
+            return asset.controlSchemes[m_AllControlSchemesSchemeIndex];
+        }
+    }
     public interface IPlayerMovementActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -815,8 +964,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnQuickslot2(InputAction.CallbackContext context);
         void OnQuickslot3(InputAction.CallbackContext context);
         void OnQuickslot4(InputAction.CallbackContext context);
-        void OnA(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
         void OnOptions(InputAction.CallbackContext context);
+        void OnAutoLock(InputAction.CallbackContext context);
+        void OnLockOnLeftTarget(InputAction.CallbackContext context);
+        void OnLockOnRightTarget(InputAction.CallbackContext context);
+        void OnEffect(InputAction.CallbackContext context);
     }
 }
