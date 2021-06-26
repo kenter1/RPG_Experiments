@@ -332,6 +332,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Y",
+                    "type": "Button",
+                    "id": "cc4b2758-c138-4a0e-aff8-c46ed0a161c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -651,6 +659,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Effect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6dd095a1-7e48-4f81-9a9d-1a2dd8a11296",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "69d9bf27-b639-4683-9623-5242f8ae5a95",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

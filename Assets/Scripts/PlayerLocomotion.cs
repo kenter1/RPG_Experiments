@@ -8,6 +8,7 @@ public class PlayerLocomotion : MonoBehaviour
     private AnimatorManager animatorManager;
     private InputManager inputManager;
     private PlayerAttacker playerAttacker;
+    private CameraManager cameraManager;
 
     private Vector3 moveDirection;
     private Transform cameraObject;
@@ -38,6 +39,7 @@ public class PlayerLocomotion : MonoBehaviour
     public bool isInAir;
     public bool rollingFlag;
 
+
     [Header("Movement Speeds")]
     public float walkingSpeed = 1.5f;
     public float runningSpeed = 5;
@@ -56,6 +58,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void Awake()
     {
+        cameraManager = FindObjectOfType<CameraManager>();
         playerAttacker = GetComponent<PlayerAttacker>();
         playerManager = GetComponent<PlayerManager>();
         animatorManager = GetComponent<AnimatorManager>();
@@ -164,22 +167,61 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void HandleRotation()
     {
-        Vector3 targetDirection = Vector3.zero;
-
-        targetDirection = cameraObject.forward * inputManager.verticalInput;
-        targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput;
-        targetDirection.Normalize();
-        targetDirection.y = 0;
-
-        if(targetDirection == Vector3.zero)
+        if (inputManager.lockOnFlag)
         {
-            targetDirection = transform.forward;
+            if(isSprinting || rollingFlag)
+            {
+                Vector3 targetDirection = Vector3.zero;
+                targetDirection = cameraManager.cameraTransform.forward * inputManager.verticalInput;
+                targetDirection += cameraManager.cameraTransform.right * inputManager.horizontalInput;
+                targetDirection.Normalize();
+                targetDirection.y = 0;
+
+                if (targetDirection == Vector3.zero)
+                {
+                    targetDirection = transform.forward;
+                }
+
+                Quaternion tr = Quaternion.LookRotation(targetDirection);
+                Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tr, rotationSpeed * Time.deltaTime);
+
+                transform.rotation = targetRotation;
+            }
+            else
+            {
+                Vector3 rotationDirection = moveDirection;
+                rotationDirection = cameraManager.currentLockOnTarget.transform.position - transform.position;
+                rotationDirection.y = 0;
+                rotationDirection.Normalize();
+
+                Quaternion tr = Quaternion.LookRotation(rotationDirection);
+                Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tr, rotationSpeed * Time.deltaTime);
+
+                transform.rotation = targetRotation;
+            }
+            
+        }
+        else
+        {
+            Vector3 targetDirection = Vector3.zero;
+
+            targetDirection = cameraObject.forward * inputManager.verticalInput;
+            targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput;
+            targetDirection.Normalize();
+            targetDirection.y = 0;
+
+            if (targetDirection == Vector3.zero)
+            {
+                targetDirection = transform.forward;
+            }
+
+            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+            Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            transform.rotation = playerRotation;
         }
 
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-        Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        transform.rotation = playerRotation;
     }
 
 
@@ -349,7 +391,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void HandleDodge()
     {
-        if (!isGrounded || rollingFlag)
+        if (!isGrounded)
         {
             return;
         }

@@ -18,9 +18,18 @@ MonoBehaviour:
   isUnarmed: 1
   Right_Hand_Idle: Right Arm Empty
   Left_Handle_Idle: Left Arm Empty
+  Two_Hand_Idle: 
   OH_Light_Attack_1: UA_Light_Attack_01
   OH_Light_Attack_2: UA_Light_Attack_02
   OH_Heavy_Attack_1: UA_Heavy_Attack_01
   OH_Heavy_Attack_2: UA_Light_Attack_02
   OH_Run_Attack_01: UA_Light_Attack_02
   OH_Run_Attack_02: UA_Light_Attack_02
+  TH_Light_Attack_1: UA_Light_Attack_01
+  TH_Light_Attack_2: UA_Light_Attack_01
+  TH_Heavy_Attack_1: UA_Light_Attack_01
+  TH_Run_Attack_01: UA_Light_Attack_01
+  TH_Run_Attack_02: UA_Light_Attack_01
+  baseStamina: 0
+  lightAttackMultiplier: 0
+  heavyAttackMultiplier: 0

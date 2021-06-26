@@ -43,7 +43,15 @@ public class WeaponPickup : Interactable
         {
             if(playerInventory.itemInventoryMask[i] == -1)
             {
-                playerInventory.itemInventoryMask[i] = playerInventory.MinAvailableIndex();
+                if (playerInventory.IsSlotAvailable(27))
+                {
+                    playerInventory.itemInventoryMask[i] = 27;
+                }
+                else
+                {
+                    playerInventory.itemInventoryMask[i] = playerInventory.MinAvailableIndex();
+                }
+
                 break;
             }
         }

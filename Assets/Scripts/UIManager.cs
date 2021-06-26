@@ -36,15 +36,15 @@ public class UIManager : MonoBehaviour
             playerInventory.itemInventoryMask[itemIndex1] = temp;
 
         }
-
-        Debug.Log("WTH: " + itemIndex1 + ", " + itemIndex2 + " Size: " + playerInventory.itemInventoryMask.Length);
-
-        //Case 2: One Object Swaps to Empty
-        if(itemIndex1 != -1 && itemIndex2 == -1)
+        else if(itemIndex1 != -1 && itemIndex2 == -1)
         {
-            playerInventory.itemInventoryMask[itemPosition2] = -1;
+            //playerInventory.itemInventoryMask[itemPosition2] = -1;
             playerInventory.itemInventoryMask[itemIndex1] = itemPosition2;
         }
+
+
+        Debug.Log("Idx1: " + itemIndex1 + ", Idx2" + itemIndex2 + " Size: " + playerInventory.itemInventoryMask.Length);
+        Debug.Log("Pos1: " + itemPosition1 + ", Pos2: " + itemPosition2 + " Size: " + playerInventory.itemInventoryMask.Length);
 
 
         UpdateUI();
@@ -53,7 +53,9 @@ public class UIManager : MonoBehaviour
     public void UpdateUI()
     {
         Item[] quickslotItems = new Item[9];
+
         #region Debug Messages
+        /*
         string str = "";
 
         foreach (var item in playerInventory.itemInventoryMask)
@@ -73,12 +75,17 @@ public class UIManager : MonoBehaviour
         }
 
         Debug.Log(str);
-
+        */
         #endregion
 
         for (int i = 0; i < playerInventory.itemInventoryMask.Length; i++)
         {
-            inventorySlots[i].Empty();
+
+            if (playerInventory.IsSlotAvailable(i))
+            {
+                inventorySlots[i].Empty();
+            }
+            
         }
 
 
@@ -90,6 +97,13 @@ public class UIManager : MonoBehaviour
             } 
         }
 
+        for (int i = 0; i < playerInventory.itemInventoryMask.Length; i++)
+        {
+            if (playerInventory.itemInventoryMask[i] > 26)
+            {
+                quickslotItems[playerInventory.itemInventoryMask[i] % 9] = playerInventory.itemInventory[i];
+            }
+        }
         playerInventory.UpdateQuickSlots(quickslotItems);
 
 

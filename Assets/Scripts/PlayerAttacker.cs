@@ -24,6 +24,7 @@ public class PlayerAttacker : MonoBehaviour
     {
         if (inputHandler.comboFlag)
         {
+            #region One Handed Sword Combos
             if (lastAttack == weapon.OH_Light_Attack_1)
             {
                 animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_2, true, true);
@@ -44,7 +45,6 @@ public class PlayerAttacker : MonoBehaviour
                     lastAttack = weapon.OH_Run_Attack_02;
                     animatorHandler.PlayTargetAnimation(weapon.OH_Run_Attack_02, true, true);
                 }
-
             }
             else if (lastAttack == weapon.OH_Heavy_Attack_1)
             {
@@ -62,8 +62,51 @@ public class PlayerAttacker : MonoBehaviour
                 }
 
             }
+            #endregion
+
+            #region Two Handed Sword Combos
+            if (lastAttack == weapon.TH_Light_Attack_1)
+            {
+                animatorHandler.PlayTargetAnimation(weapon.TH_Light_Attack_2, true, true);
+                lastAttack = weapon.TH_Light_Attack_2;
+                animatorHandler.animator.SetBool("canDoCombo", true);
+            }
+            else if (lastAttack == weapon.TH_Light_Attack_2)
+            {
+                if (heavyAttack == false)
+                {
+                    animatorHandler.animator.SetBool("canDoCombo", false);
+                    lastAttack = weapon.TH_Run_Attack_01;
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Run_Attack_01, true, true);
+                }
+                else
+                {
+                    animatorHandler.animator.SetBool("canDoCombo", false);
+                    lastAttack = weapon.TH_Run_Attack_02;
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Run_Attack_02, true, true);  
+                }
+            }
+            else if (lastAttack == weapon.TH_Heavy_Attack_1)
+            {
+                if (heavyAttack == false)
+                {
+                    lastAttack = weapon.TH_Run_Attack_01;
+                    animatorHandler.animator.SetBool("canDoCombo", false);
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Run_Attack_01, true, true);
+                }
+                else
+                {
+                    lastAttack = weapon.OH_Heavy_Attack_2;
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Run_Attack_02, true, true);
+                    animatorHandler.animator.SetBool("canDoCombo", false);
+                }
+
+            }
+
+            #endregion
+
         }
-       
+
     }
 
     public void HandleLightAttack(WeaponItem weapon, bool running = false)
@@ -74,15 +117,33 @@ public class PlayerAttacker : MonoBehaviour
             weaponSlotManager.attackingWeapon = weapon;
             if (running)
             {
-                print("Playing Run Light Attack Animation: " + weapon.OH_Run_Attack_01);
-                animatorHandler.PlayTargetAnimation(weapon.OH_Run_Attack_01, true, true);
-
+                if (inputHandler.twoHandFlag)
+                {
+                    print("Playing Run Two Handed Light Attack Animation: " + weapon.TH_Run_Attack_01);
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Run_Attack_01, true, true);
+                }
+                else
+                {
+                    print("Playing Run Light Attack Animation: " + weapon.OH_Run_Attack_01);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Run_Attack_01, true, true);
+                }
             }
             else
             {
-                print("Playing Light Attack Animation: " + weapon.OH_Light_Attack_1);
-                animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_1, true, true);
-                lastAttack = weapon.OH_Light_Attack_1;
+                if (inputHandler.twoHandFlag)
+                {
+                    print("Playing Two Handed Light Attack Animation: " + weapon.TH_Light_Attack_1);
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Light_Attack_1, true, true);
+                    lastAttack = weapon.TH_Light_Attack_1;
+                }
+                else
+                {
+                    print("Playing Light Attack Animation: " + weapon.OH_Light_Attack_1);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_1, true, true);
+                    lastAttack = weapon.OH_Light_Attack_1;
+                }
+
+
             }
         }
 
@@ -95,15 +156,34 @@ public class PlayerAttacker : MonoBehaviour
             weaponSlotManager.attackingWeapon = weapon;
             if (running)
             {
-                print("Playing Run Light Attack Animation: " + weapon.OH_Run_Attack_02);
-                animatorHandler.PlayTargetAnimation(weapon.OH_Run_Attack_02, true, true);
+                if (inputHandler.twoHandFlag)
+                {
+                    print("Playing Run Two Handed Light Attack Animation: " + weapon.TH_Run_Attack_02);
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Run_Attack_02, true, true);
+                }
+                else
+                {
+                    print("Playing Run Light Attack Animation: " + weapon.OH_Run_Attack_02);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Run_Attack_02, true, true);
+                }
+
 
             }
             else
             {
-                print("Playing Heavy Attack Animation: " + weapon.OH_Heavy_Attack_1);
-                animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_1, true, true);
-                lastAttack = weapon.OH_Heavy_Attack_1;
+                if (inputHandler.twoHandFlag)
+                {
+                    print("Playing Two Handed Heavy Attack Animation: " + weapon.TH_Heavy_Attack_1);
+                    animatorHandler.PlayTargetAnimation(weapon.TH_Heavy_Attack_1, true, true);
+                    lastAttack = weapon.TH_Heavy_Attack_1;
+                }
+                else
+                {
+                    print("Playing Heavy Attack Animation: " + weapon.OH_Heavy_Attack_1);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_1, true, true);
+                    lastAttack = weapon.OH_Heavy_Attack_1;
+                }
+
             }
 
         }

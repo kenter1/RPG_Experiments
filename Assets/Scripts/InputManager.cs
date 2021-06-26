@@ -29,6 +29,7 @@ public class InputManager : MonoBehaviour
     public bool b_Input;
     public bool jump_Input;
     public bool x_Input;
+    public bool y_Input;
 
     public bool rb_Input;
     public bool rt_Input;
@@ -52,6 +53,7 @@ public class InputManager : MonoBehaviour
     public bool optionFlag;
     public bool comboFlag;
     public bool lockOnFlag;
+    public bool twoHandFlag;
 
     private void Awake()
     {
@@ -98,6 +100,8 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.LockOnRightTarget.performed += i => lockOnRightInput = true;
 
             playerControls.PlayerActions.Effect.performed += i => effectInput = true;
+            playerControls.PlayerActions.Y.performed += i => y_Input = true;
+
 
         }
 
@@ -121,6 +125,7 @@ public class InputManager : MonoBehaviour
             HandleInteractingButtonInput();
             HandleLockOnInput();
             HandleEffectInput();
+            HandleTwoHandInput();
         }
         HandleAttackInput();
 
@@ -137,7 +142,15 @@ public class InputManager : MonoBehaviour
         cameraInputY = cameraInput.y;
 
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
-        animatorManager.UpdateAnimatorValues(0, moveAmount, playerLocomotion.isSprinting);
+        if (lockOnFlag && playerLocomotion.isSprinting == false)
+        {
+            animatorManager.UpdateAnimatorValues(horizontalInput, verticalInput, playerLocomotion.isSprinting);
+        }
+        else
+        {
+            animatorManager.UpdateAnimatorValues(0, moveAmount, playerLocomotion.isSprinting);
+        }
+        
     }
 
     private void HandleSprintingInput()
@@ -294,6 +307,7 @@ public class InputManager : MonoBehaviour
         {
             //a_Input = false;
             //Debug.Log("Press A Input");
+            
         }
     }
 
@@ -357,12 +371,10 @@ public class InputManager : MonoBehaviour
             lockOnInput = false;
             cameraManager.HandleLockOn();
             cameraManager.currentLockOnTarget = cameraManager.nearestLockOnTarget;
-            Debug.Log("Target: " + cameraManager.currentLockOnTarget.parent.name);
             if(cameraManager.nearestLockOnTarget != null)
             {
                 cameraManager.currentLockOnTarget = cameraManager.nearestLockOnTarget;
                 lockOnFlag = true;
-                Debug.Log("Target: " + cameraManager.currentLockOnTarget.parent.name);
             }            
         }
         else if (lockOnInput && lockOnFlag)
@@ -391,6 +403,8 @@ public class InputManager : MonoBehaviour
             }
         }
 
+        cameraManager.SetCameraHeight();
+
     }
 
     private void HandleEffectInput()
@@ -415,4 +429,25 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    private void HandleTwoHandInput()
+    {
+        if (y_Input  && weaponSlotManager.rightHandSlot.currentWeaponModel != null)
+        {
+            twoHandFlag = !twoHandFlag;
+            y_Input = false;
+
+            if (twoHandFlag)
+            {
+                //Enable Two Handing
+                weaponSlotManager.LoadWeaponOnSlot(playerInventory.rightWeapon, false);
+            }
+            else
+            {
+                //Disable Two Handing
+                weaponSlotManager.LoadWeaponOnSlot(playerInventory.rightWeapon, false);
+
+            }
+
+        }
+    }
 }

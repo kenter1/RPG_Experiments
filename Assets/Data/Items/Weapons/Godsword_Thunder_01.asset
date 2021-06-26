@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6666f881507b554a955c70389d3d04a, type: 3}
+  m_Name: Godsword_Thunder_01
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 21300000, guid: c6d21137991ca3d448273c4e81cbf476, type: 3}
+  itemName: God Sword of Thunder
+  modelPrefab: {fileID: 2262186580405881195, guid: 052709e466dfe8947a4831782af3f736, type: 3}
+  isUnarmed: 0
+  Right_Hand_Idle: Right_Arm_Idle_01
+  Left_Handle_Idle: Left_Arm_Idle_01
+  Two_Hand_Idle: TH_idle_sword_01
+  OH_Light_Attack_1: OH_Light_Attack_01
+  OH_Light_Attack_2: OH_Light_Attack_02
+  OH_Heavy_Attack_1: OH_Heavy_Attack_01
+  OH_Heavy_Attack_2: OH_Heavy_Attack_03
+  OH_Run_Attack_01: OH_Run_Attack_01
+  OH_Run_Attack_02: OH_Run_Attack_02
+  TH_Light_Attack_1: TH_SWORD_LIGHT_ATTACK_01
+  TH_Light_Attack_2: TH_SWORD_LIGHT_ATTACK_02
+  TH_Heavy_Attack_1: TH_SWORD_HEAVY_ATTACK_01
+  TH_Run_Attack_01: TH_SWORD_RUNNING_ATTACK_01
+  TH_Run_Attack_02: TH_SWORD_RUNNING_ATTACK_02
+  baseStamina: 30
+  lightAttackMultiplier: 1
+  heavyAttackMultiplier: 1.5

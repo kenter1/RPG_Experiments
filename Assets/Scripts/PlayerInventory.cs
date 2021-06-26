@@ -7,8 +7,9 @@ using System;
 public class PlayerInventory : MonoBehaviour
 {
     public WeaponSlotManager weaponSlotManager;
+   
     private ApplyEffect applyEffect;
-
+    private UIManager uIManager;
     public WeaponItem rightWeapon;
     public WeaponItem leftWeapon;
 
@@ -21,6 +22,7 @@ public class PlayerInventory : MonoBehaviour
     public int currentLeftWeaponIndex = -1;
 
     public List<Item> itemInventory;
+    private int itemCount = 0;
     public int[] itemInventoryMask = new int[36];
     public Item[] quickSlotItems;
 
@@ -28,6 +30,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Awake()
     {
+        uIManager = FindObjectOfType<UIManager>();
         applyEffect = GetComponent<ApplyEffect>();
         weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
         quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
@@ -44,6 +47,14 @@ public class PlayerInventory : MonoBehaviour
         leftWeapon = unarmedWeapon;
     }
 
+    private void Update()
+    {
+        if(itemCount != itemInventory.Count)
+        {
+            uIManager.UpdateUI();
+            itemCount = itemInventory.Count;
+        }
+    }
 
     public void UpdateQuickSlots(Item[] items)
     {
@@ -62,6 +73,18 @@ public class PlayerInventory : MonoBehaviour
         }
 
         return -1;
+    }
+
+    public bool IsSlotAvailable(int slot)
+    {
+        if(Array.FindIndex(itemInventoryMask, row => row == slot) == -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void ChangeWeapon(int slot)

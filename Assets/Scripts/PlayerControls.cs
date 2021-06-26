@@ -345,6 +345,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Y"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc4b2758-c138-4a0e-aff8-c46ed0a161c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -666,6 +674,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Effect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6dd095a1-7e48-4f81-9a9d-1a2dd8a11296"",
+                    ""path"": ""<Keyboard>/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Y"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69d9bf27-b639-4683-9623-5242f8ae5a95"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Y"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -700,6 +730,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_PlayerActions_LockOnLeftTarget = m_PlayerActions.FindAction("LockOnLeftTarget", throwIfNotFound: true);
         m_PlayerActions_LockOnRightTarget = m_PlayerActions.FindAction("LockOnRightTarget", throwIfNotFound: true);
         m_PlayerActions_Effect = m_PlayerActions.FindAction("Effect", throwIfNotFound: true);
+        m_PlayerActions_Y = m_PlayerActions.FindAction("Y", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -806,6 +837,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerActions_LockOnLeftTarget;
     private readonly InputAction m_PlayerActions_LockOnRightTarget;
     private readonly InputAction m_PlayerActions_Effect;
+    private readonly InputAction m_PlayerActions_Y;
     public struct PlayerActionsActions
     {
         private @PlayerControls m_Wrapper;
@@ -826,6 +858,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @LockOnLeftTarget => m_Wrapper.m_PlayerActions_LockOnLeftTarget;
         public InputAction @LockOnRightTarget => m_Wrapper.m_PlayerActions_LockOnRightTarget;
         public InputAction @Effect => m_Wrapper.m_PlayerActions_Effect;
+        public InputAction @Y => m_Wrapper.m_PlayerActions_Y;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -883,6 +916,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Effect.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnEffect;
                 @Effect.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnEffect;
                 @Effect.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnEffect;
+                @Y.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnY;
+                @Y.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnY;
+                @Y.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnY;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -935,6 +971,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Effect.started += instance.OnEffect;
                 @Effect.performed += instance.OnEffect;
                 @Effect.canceled += instance.OnEffect;
+                @Y.started += instance.OnY;
+                @Y.performed += instance.OnY;
+                @Y.canceled += instance.OnY;
             }
         }
     }
@@ -971,5 +1010,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnLockOnLeftTarget(InputAction.CallbackContext context);
         void OnLockOnRightTarget(InputAction.CallbackContext context);
         void OnEffect(InputAction.CallbackContext context);
+        void OnY(InputAction.CallbackContext context);
     }
 }

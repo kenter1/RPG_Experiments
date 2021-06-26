@@ -12,6 +12,7 @@ public class WeaponItem : Item
     [Header("Idle Animations")]
     public string Right_Hand_Idle;
     public string Left_Handle_Idle;
+    public string Two_Hand_Idle;
 
     [Header("One Handed Attack Animation")]
     public string OH_Light_Attack_1;
@@ -20,6 +21,13 @@ public class WeaponItem : Item
     public string OH_Heavy_Attack_2;
     public string OH_Run_Attack_01;
     public string OH_Run_Attack_02;
+
+    [Header("Two Handed Attack Animation")]
+    public string TH_Light_Attack_1;
+    public string TH_Light_Attack_2;
+    public string TH_Heavy_Attack_1;
+    public string TH_Run_Attack_01;
+    public string TH_Run_Attack_02;
 
     [Header("Stamina Costs")]
     public int baseStamina;
