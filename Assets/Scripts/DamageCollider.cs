@@ -5,11 +5,13 @@ using UnityEngine;
 public class DamageCollider : MonoBehaviour
 {
     private BoxCollider damageCollider;
+    private PlayerAttacker playerAttacker;
 
     public int currentWeaponDamage = 25;
 
     private void Awake()
     {
+        playerAttacker = FindObjectOfType<PlayerAttacker>();
         damageCollider = GetComponent<BoxCollider>();
         damageCollider.gameObject.SetActive(true);
         damageCollider.isTrigger = true;
@@ -44,7 +46,9 @@ public class DamageCollider : MonoBehaviour
 
             if (enemyStats != null)
             {
-                enemyStats.TakeDamage(currentWeaponDamage);
+                bool heavy = playerAttacker.lastAttack.ToLower().Contains("heavy");
+                Debug.Log("Hit: " + playerAttacker.lastAttack.ToLower());
+                enemyStats.TakeDamage(currentWeaponDamage, heavy);
             }
         }
     }

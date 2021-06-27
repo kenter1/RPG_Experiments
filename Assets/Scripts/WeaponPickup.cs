@@ -39,15 +39,20 @@ public class WeaponPickup : Interactable
         playerLocomotion.playerRigidBody.velocity = Vector3.zero; //Stops the player from moving while picking up an item
         animatorManager.PlayTargetAnimation("Pick Up Item", true, true); // Plays the animation of looting the item
         playerInventory.itemInventory.Add(weapon);
-        for(int i = 0; i < playerInventory.itemInventoryMask.Length; i++)
+        int i;
+        for (i = 0; i < playerInventory.itemInventoryMask.Length; i++)
         {
             if(playerInventory.itemInventoryMask[i] == -1)
             {
                 if (playerInventory.IsSlotAvailable(27))
                 {
-                    playerInventory.itemInventoryMask[i] = 27;
+                    playerInventory.itemInventoryMask[i] = 27;    
                 }
-                else
+                else if (playerInventory.IsSlotAvailable(28))
+                {
+                    playerInventory.itemInventoryMask[i] = 28;
+                }
+                else 
                 {
                     playerInventory.itemInventoryMask[i] = playerInventory.MinAvailableIndex();
                 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6666f881507b554a955c70389d3d04a, type: 3}
   m_Name: Godsword_Thunder_01
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 21300000, guid: c6d21137991ca3d448273c4e81cbf476, type: 3}
+  itemIcon: {fileID: 21300000, guid: 8c845ff275085804788620ab8a65bc0a, type: 3}
   itemName: God Sword of Thunder
   modelPrefab: {fileID: 2262186580405881195, guid: 052709e466dfe8947a4831782af3f736, type: 3}
   isUnarmed: 0
@@ -27,6 +27,7 @@ MonoBehaviour:
   OH_Run_Attack_02: OH_Run_Attack_02
   TH_Light_Attack_1: TH_SWORD_LIGHT_ATTACK_01
   TH_Light_Attack_2: TH_SWORD_LIGHT_ATTACK_02
+  TH_Light_Attack_3: TH_SWORD_LIGHT_ATTACK_03
   TH_Heavy_Attack_1: TH_SWORD_HEAVY_ATTACK_01
   TH_Run_Attack_01: TH_SWORD_RUNNING_ATTACK_01
   TH_Run_Attack_02: TH_SWORD_RUNNING_ATTACK_02

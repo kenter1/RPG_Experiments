@@ -9,8 +9,15 @@ public class ApplyEffect : MonoBehaviour
     public GameObject effect3;
     public GameObject effect4;
 
+    private SoundManager soundManager;
+
     public PSMeshRendererUpdater psUpdater;
     bool effectFlag;
+
+    public void Awake()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+    }
 
     public void ApplyOnWeapon(GameObject meshObject)
     {
@@ -23,6 +30,7 @@ public class ApplyEffect : MonoBehaviour
         //psUpdater.StartScaleMultiplier = 0.5f;
         psUpdater.UpdateMeshEffect(meshObject);
         effectFlag = true;
+        soundManager.PlaySound(soundManager.electric_effect_01);
     }
 
     public void ToggleEffect()
@@ -34,6 +42,7 @@ public class ApplyEffect : MonoBehaviour
             if (effectFlag)
             {
                 psUpdater.IsActive = true;
+                soundManager.PlaySound(soundManager.electric_effect_01);
             }
             else
             {

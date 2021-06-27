@@ -27,6 +27,7 @@ MonoBehaviour:
   OH_Run_Attack_02: OH_Run_Attack_02
   TH_Light_Attack_1: TH_SWORD_LIGHT_ATTACK_01
   TH_Light_Attack_2: TH_SWORD_LIGHT_ATTACK_02
+  TH_Light_Attack_3: TH_SWORD_LIGHT_ATTACK_03
   TH_Heavy_Attack_1: TH_SWORD_HEAVY_ATTACK_01
   TH_Run_Attack_01: TH_SWORD_RUNNING_ATTACK_01
   TH_Run_Attack_02: TH_SWORD_RUNNING_ATTACK_02

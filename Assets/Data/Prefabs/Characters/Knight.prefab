@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1294042884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294042885}
+  m_Layer: 3
+  m_Name: Lock On Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1294042885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294042884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.365, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6611521334631859135}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &703783531703542297
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +894,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ccae2dc6cf6f0c4479b782fedd0c8172, type: 2}
+  - {fileID: 2100000, guid: 60dddc079e4eb9a4e9b92203b59cd979, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3123,6 +3153,7 @@ GameObject:
   - component: {fileID: 5539292631577379628}
   - component: {fileID: 5539292631577379627}
   - component: {fileID: 2918434191928341202}
+  - component: {fileID: 873945255}
   m_Layer: 3
   m_Name: Knight
   m_TagString: Player
@@ -3142,6 +3173,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7064346443783295889}
+  - {fileID: 1294042885}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3183,6 +3215,7 @@ MonoBehaviour:
   b_Input: 0
   jump_Input: 0
   x_Input: 0
+  y_Input: 0
   rb_Input: 0
   rt_Input: 0
   quickslot1_Input: 0
@@ -3191,9 +3224,16 @@ MonoBehaviour:
   quickslot4_Input: 0
   inventory_Input: 0
   options_Input: 0
+  lockOnInput: 0
+  lockOnLeftInput: 0
+  lockOnRightInput: 0
+  effectInput: 0
+  initEffectFlag: 1
   inventoryFlag: 0
   optionFlag: 0
   comboFlag: 0
+  lockOnFlag: 0
+  twoHandFlag: 0
 --- !u!54 &2112567125363423494
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3292,6 +3332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4eea183d21d7c4bbd759b4634423ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockOnTransform: {fileID: 1294042885}
   interactableUIGameObject: {fileID: 0}
   itemInteractableGameObject: {fileID: 0}
   playerCollider: {fileID: 0}
@@ -3323,6 +3364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ed80109dbe0b5468bafddf2291d0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponSlotManager: {fileID: 0}
   rightWeapon: {fileID: 11400000, guid: 9b5e1656156682b4cac22dd99e2a61e5, type: 2}
   leftWeapon: {fileID: 11400000, guid: 9b5e1656156682b4cac22dd99e2a61e5, type: 2}
   unarmedWeapon: {fileID: 11400000, guid: 5b5ae211d84316b4fbf9ec356ff5ef48, type: 2}
@@ -3342,7 +3384,16 @@ MonoBehaviour:
   currentLeftWeaponIndex: -1
   itemInventory: []
   itemInventoryMask: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  quickSlotItems: []
+  quickSlotItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &5539292631577379628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3355,6 +3406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4ea1f9d6fd64540b7bd46a9047a150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightHandSlot: {fileID: 0}
   leftHandDamageCollider: {fileID: 0}
   rightHandDamageCollider: {fileID: 0}
   attackingFlag: 0
@@ -3394,3 +3446,20 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   staminaBar: {fileID: 0}
   lerpValue: 0.00015
+--- !u!114 &873945255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7898062807926632876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e51c1db6f207e541bfa0d08dfb251b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect1: {fileID: 101616, guid: 9a68c593c04bde34c8e554471b972f3e, type: 3}
+  effect2: {fileID: 1034206889835440, guid: dbb809ba6db1b85439bab7da350b5aa6, type: 3}
+  effect3: {fileID: 189626, guid: efae5e56ebb7cd04f8e5de57add5d41f, type: 3}
+  effect4: {fileID: 196572, guid: a027108eca869824e93bcef13617c227, type: 3}
+  psUpdater: {fileID: 0}

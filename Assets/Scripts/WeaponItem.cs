@@ -25,6 +25,7 @@ public class WeaponItem : Item
     [Header("Two Handed Attack Animation")]
     public string TH_Light_Attack_1;
     public string TH_Light_Attack_2;
+    public string TH_Light_Attack_3;
     public string TH_Heavy_Attack_1;
     public string TH_Run_Attack_01;
     public string TH_Run_Attack_02;
