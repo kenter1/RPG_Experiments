@@ -4,22 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Hittable
-  - Enemy
-  - FxTemporaire
-  - Interactable
-  - Object
+  - Fire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Interactable
-  - Object
-  - Environment
-  - Character
+  - 
+  - 
+  - Socket
+  - 
   - 
   - 
   - 

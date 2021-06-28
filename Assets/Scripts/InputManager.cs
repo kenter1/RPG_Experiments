@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private PlayerControls playerControls;
+    private StatusUI statusUI;
+    private BuildInput_Custom buildInput_Custom;
+    private UserControl playerControls;
     private PlayerLocomotion playerLocomotion;
     private AnimatorManager animatorManager;
     private PlayerAttacker playerAttacker;
@@ -39,6 +41,8 @@ public class InputManager : MonoBehaviour
     public bool quickslot3_Input;
     public bool quickslot4_Input;
 
+    public bool buildMode_Input;
+
     public bool inventory_Input;
     public bool options_Input;
 
@@ -54,9 +58,11 @@ public class InputManager : MonoBehaviour
     public bool comboFlag;
     public bool lockOnFlag;
     public bool twoHandFlag;
+    public bool buildModeFlag;
 
     private void Awake()
     {
+        statusUI = FindObjectOfType<StatusUI>();
         weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
@@ -66,14 +72,14 @@ public class InputManager : MonoBehaviour
         uiManager = FindObjectOfType<UIManager>();
         cameraManager = FindObjectOfType<CameraManager>();
         applyEffect = GetComponent<ApplyEffect>();
-
+        buildInput_Custom = FindObjectOfType<BuildInput_Custom>();
     }
 
     private void OnEnable()
     {
         if(playerControls == null)
         {
-            playerControls = new PlayerControls();
+            playerControls = new UserControl();
             playerControls.PlayerMovement.Movement.performed += i => movementInput = i.ReadValue<Vector2>();
             playerControls.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
 
@@ -101,8 +107,7 @@ public class InputManager : MonoBehaviour
 
             playerControls.PlayerActions.Effect.performed += i => effectInput = true;
             playerControls.PlayerActions.Y.performed += i => y_Input = true;
-
-
+            playerControls.PlayerActions.BuildMode.performed += i => buildMode_Input = true;
         }
 
         playerControls.Enable();
@@ -126,6 +131,7 @@ public class InputManager : MonoBehaviour
             HandleLockOnInput();
             HandleEffectInput();
             HandleTwoHandInput();
+            HandleBuildModeInput();
         }
         HandleAttackInput();
 
@@ -449,5 +455,28 @@ public class InputManager : MonoBehaviour
             }
 
         }
+    }
+
+    private void HandleBuildModeInput()
+    {
+
+        if (buildMode_Input)
+        {
+            buildMode_Input = false;
+
+            buildModeFlag = !buildModeFlag;
+
+            if (buildModeFlag)
+            {
+                buildInput_Custom.enabled = true;
+            }
+            else
+            {
+                buildInput_Custom.enabled = false;
+            }
+
+
+        }
+
     }
 }

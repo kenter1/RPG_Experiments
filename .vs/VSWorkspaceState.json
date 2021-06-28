@@ -5,8 +5,9 @@
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\A.I",
     "\\Assets\\Scripts\\Managers",
-    "\\Assets\\Scripts\\Player"
+    "\\Assets\\Scripts\\Player",
+    "\\Assets\\Scripts\\UI"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\ApplyEffect.cs",
+  "SelectedNode": "\\Assets\\Scripts\\UI\\StatusUI.cs",
   "PreviewInSolutionExplorer": false
 }
