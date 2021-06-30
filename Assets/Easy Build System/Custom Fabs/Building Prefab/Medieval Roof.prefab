@@ -346,16 +346,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 0.2
   PartOffsets:
-  - Piece: {fileID: 6189673127276995888, guid: 6d2035197f30a004e8c7489a1a5e3e69, type: 3}
+  - Piece: {fileID: 2564759683861277914, guid: c84edea7c885dff498f821ae8d4b6253, type: 3}
     AllowSameCategory: 0
-    Position: {x: 0, y: -0.28, z: 0}
+    Position: {x: 0, y: 0.1, z: -0.26}
     Rotation: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
-  - Piece: {fileID: 1466516181016995439, guid: f0cf64bb589db0541b9f87b97a564b98, type: 3}
+  - Piece: {fileID: 7034353213739688294, guid: ffdd63edc069c08489e5ca6ae2c63e60, type: 3}
     AllowSameCategory: 0
-    Position: {x: 0, y: 0.1, z: 0}
+    Position: {x: 0, y: -0.42, z: 0}
     Rotation: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
+    Scale: {x: 1.48, y: 1, z: 1.47}
+  - Piece: {fileID: 5078740833167791789, guid: b982d475c0af1ff429ac1b2975f43db1, type: 3}
+    AllowSameCategory: 0
+    Position: {x: 0, y: -0.12, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    Scale: {x: 1.14, y: 1, z: 1.12}
   BusySpaces: []
   ParentPiece: {fileID: 0}
   IsDisabled: 0

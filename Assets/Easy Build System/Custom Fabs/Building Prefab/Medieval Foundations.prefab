@@ -98,10 +98,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 0.2
   PartOffsets:
-  - Piece: {fileID: 363662246463896715, guid: 2f1b4f8fafba8554aa03ca1476d63fb1, type: 3}
+  - Piece: {fileID: 2564759683861277914, guid: c84edea7c885dff498f821ae8d4b6253, type: 3}
     AllowSameCategory: 1
-    Position: {x: -9.15, y: 0.26, z: 7.6}
-    Rotation: {x: 0, y: -6.17, z: 0}
+    Position: {x: 0, y: 0.41, z: 0.22}
+    Rotation: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+  - Piece: {fileID: 7034353213739688294, guid: ffdd63edc069c08489e5ca6ae2c63e60, type: 3}
+    AllowSameCategory: 0
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+  - Piece: {fileID: 5078740833167791789, guid: b982d475c0af1ff429ac1b2975f43db1, type: 3}
+    AllowSameCategory: 0
+    Position: {x: 0, y: 0.42, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
   BusySpaces: []
   ParentPiece: {fileID: 0}
