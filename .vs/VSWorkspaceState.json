@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
-    "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\A.I",
-    "\\Assets\\Scripts\\Managers",
-    "\\Assets\\Scripts\\Player",
-    "\\Assets\\Scripts\\UI"
+    "\\Assets\\Easy Build System\\Features\\Resources",
+    "\\Assets\\Easy Build System\\Features\\Scripts",
+    "\\Assets\\Easy Build System\\Features\\Scripts\\Core",
+    "\\Assets\\Easy Build System\\Features\\Scripts\\Core\\Base\\Addon",
+    "\\Assets\\Easy Build System\\Features\\Scripts\\Core\\Base\\Condition\\Helper",
+    "\\Assets\\Easy Build System\\Features\\Scripts\\Core\\Base\\Event",
+    "\\Assets\\Easy Build System\\Features\\Scripts\\Core\\Base\\Group",
+    "\\Assets\\Easy Build System\\Features\\Scripts\\Core\\Base\\Manager"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\UI\\StatusUI.cs",
+  "SelectedNode": "\\Assets\\Scripts\\A.I\\EnemyAnimatorManager.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &413733306
+--- !u!1 &654425182
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 413733307}
-  - component: {fileID: 413733308}
+  - component: {fileID: 654425183}
+  - component: {fileID: 654425184}
   m_Layer: 0
-  m_Name: Socket
+  m_Name: Socket (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &413733307
+--- !u!4 &654425183
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413733306}
+  m_GameObject: {fileID: 654425182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.027, z: 1.68}
+  m_LocalPosition: {x: 0, y: 4.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8881911292520076932}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &413733308
+--- !u!114 &654425184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413733306}
+  m_GameObject: {fileID: 654425182}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4dd892cbe0d92b4c897fa540a9de9fe, type: 3}
@@ -45,60 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 0.2
   PartOffsets:
-  - Piece: {fileID: 1143547354985919345, guid: 7630da8eeda3cc440ba706b1181b178e, type: 3}
-    AllowSameCategory: 0
-    Position: {x: 0, y: 0, z: 0}
-    Rotation: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-  BusySpaces: []
-  ParentPiece: {fileID: 0}
-  IsDisabled: 0
---- !u!1 &1472417473
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1472417474}
-  - component: {fileID: 1472417475}
-  m_Layer: 0
-  m_Name: Socket
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1472417474
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472417473}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.027, z: -1.69}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8881911292520076932}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1472417475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472417473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4dd892cbe0d92b4c897fa540a9de9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Radius: 0.2
-  PartOffsets:
-  - Piece: {fileID: 1143547354985919345, guid: 7630da8eeda3cc440ba706b1181b178e, type: 3}
+  - Piece: {fileID: 8326943300411846631}
     AllowSameCategory: 0
     Position: {x: 0, y: 0, z: 0}
     Rotation: {x: 0, y: 0, z: 0}
@@ -117,6 +64,7 @@ GameObject:
   - component: {fileID: 8881911292520076932}
   - component: {fileID: 8326943300411846631}
   - component: {fileID: 7443274558050728901}
+  - component: {fileID: -1531571937789048664}
   m_Layer: 0
   m_Name: Medieval Stone Wall
   m_TagString: Untagged
@@ -136,8 +84,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7304759652946770558}
-  - {fileID: 413733307}
-  - {fileID: 1472417474}
+  - {fileID: 654425183}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -160,7 +107,7 @@ MonoBehaviour:
   Category: Wall
   IsEditable: 1
   IsDestructible: 1
-  RequireSocket: 0
+  RequireSocket: 1
   IgnoreSocket: 0
   KeepToHeight: 0
   KeepHeight: 0
@@ -214,6 +161,48 @@ MonoBehaviour:
   CollisionIgnoreCategory: []
   RequireBuildableSurface: 0
   CollisionIgnoreWhenSnap: 0
+--- !u!114 &-1531571937789048664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170216625385704293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbd048c22228974da7c0dacad63c05c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PhysicsSleeping: 0
+  RequireStableSupport: 0
+  ConvexMeshColliders: 1
+  CheckStabilitySometime: 0
+  CheckStabilityInterval: 0.5
+  Detections:
+  - DetectionBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 3, y: 0.5, z: 3}
+    RequireLayer:
+      serializedVersion: 2
+      m_Bits: 1
+    RequireSupport: 0
+    RequiredCategory:
+    - Foundation
+    - Wall
+--- !u!114 &7421616752985333186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7304759652946537332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629c863efde310a43b9da790679e4385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthLevel: 200
+  currentHealth: 0
 --- !u!1001 &5397238321934453766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -225,6 +214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438902505348019832, guid: b9329a8c857a22f48a819e4b437c1f48,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 3438902505348019832, guid: b9329a8c857a22f48a819e4b437c1f48,
         type: 3}
@@ -281,8 +275,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medieval Stone Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 3438902505348310898, guid: b9329a8c857a22f48a819e4b437c1f48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438902505348310898, guid: b9329a8c857a22f48a819e4b437c1f48,
+        type: 3}
+      propertyPath: m_TagString
+      value: DestroyableBuilding
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9329a8c857a22f48a819e4b437c1f48, type: 3}
+--- !u!1 &7304759652946537332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3438902505348310898, guid: b9329a8c857a22f48a819e4b437c1f48,
+    type: 3}
+  m_PrefabInstance: {fileID: 5397238321934453766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7304759652946770558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3438902505348019832, guid: b9329a8c857a22f48a819e4b437c1f48,

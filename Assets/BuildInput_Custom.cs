@@ -27,7 +27,8 @@ public class BuildInput_Custom : MonoBehaviour
     public InputAction placeMode, removeMode, selectionMode, confirmAction, cancelAction;
     public InputAction scrollingAction;
     private bool buildPlacementFlag;
-
+    private bool placeMode_Input;
+    private bool confirmAction_Input;
 
     #endregion
 
@@ -63,6 +64,10 @@ public class BuildInput_Custom : MonoBehaviour
         confirmAction.Enable();
         cancelAction.Enable();
         scrollingAction.Enable();
+
+        placeMode.performed += i => placeMode_Input = true;
+        confirmAction.performed += i => confirmAction_Input = true;
+
     }
 
     void OnDisable()
@@ -92,7 +97,15 @@ public class BuildInput_Custom : MonoBehaviour
 
         if (buildingNow)
         {
-            if (placeMode.ReadValue<float>() > pressTolerance) BuilderBehaviour.Instance.ChangeMode(BuildMode.Placement);
+
+            
+            if (placeMode_Input)
+            {
+                placeMode_Input = false;
+                BuilderBehaviour.Instance.ChangeMode(BuildMode.Placement);
+            }
+
+
             if (removeMode.ReadValue<float>() > pressTolerance) BuilderBehaviour.Instance.ChangeMode(BuildMode.Destruction);
             if (selectionMode.ReadValue<float>() > pressTolerance) BuilderBehaviour.Instance.ChangeMode(BuildMode.Edition);  // edition = pick up a current part
             if (CancelInput()) BuilderBehaviour.Instance.ChangeMode(BuildMode.None);
@@ -172,9 +185,17 @@ public class BuildInput_Custom : MonoBehaviour
 
     private bool ConfirmInput()
     {
-        if (confirmAction.ReadValue<float>() > pressTolerance)
+        if (confirmAction_Input)
+        {
+            confirmAction_Input = false;
             return true;
-        return false;
+        }
+        else
+        {
+            return false;
+        }
+            
+
     }
 
     private bool CancelInput()

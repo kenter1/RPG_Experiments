@@ -27,11 +27,11 @@ public class WeaponPickup : Interactable
 
         PlayerInventory playerInventory;
         PlayerLocomotion playerLocomotion;
-        AnimatorManager animatorManager;
+        PlayerAnimatorManager animatorManager;
 
         playerInventory = playerManager.GetComponent<PlayerInventory>();
         playerLocomotion = playerManager.GetComponent<PlayerLocomotion>();
-        animatorManager = playerManager.GetComponentInChildren<AnimatorManager>();
+        animatorManager = playerManager.GetComponentInChildren<PlayerAnimatorManager>();
 
 
 

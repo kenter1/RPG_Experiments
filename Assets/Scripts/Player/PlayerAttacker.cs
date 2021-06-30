@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttacker : MonoBehaviour
 {
-    AnimatorManager animatorHandler;
+    PlayerAnimatorManager animatorHandler;
     PlayerManager playerManager;
     PlayerLocomotion playerLocomotion;
     InputManager inputHandler;
@@ -13,7 +13,7 @@ public class PlayerAttacker : MonoBehaviour
 
     private void Awake()
     {
-        animatorHandler = GetComponentInChildren<AnimatorManager>();
+        animatorHandler = GetComponentInChildren<PlayerAnimatorManager>();
         playerManager = GetComponent<PlayerManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
         inputHandler = GetComponent<InputManager>();

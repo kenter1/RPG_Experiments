@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerLocomotion : MonoBehaviour
 {
+    AddonNavMesh addonNavMesh;
     private PlayerManager playerManager;
-    private AnimatorManager animatorManager;
+    private PlayerAnimatorManager animatorManager;
     private InputManager inputManager;
     private PlayerAttacker playerAttacker;
     private CameraManager cameraManager;
@@ -54,14 +54,14 @@ public class PlayerLocomotion : MonoBehaviour
     Vector3 normalVector;
     Vector3 targetPosition;
 
-    private bool toggleCollider;
 
     private void Awake()
     {
+        
         cameraManager = FindObjectOfType<CameraManager>();
         playerAttacker = GetComponent<PlayerAttacker>();
         playerManager = GetComponent<PlayerManager>();
-        animatorManager = GetComponent<AnimatorManager>();
+        animatorManager = GetComponent<PlayerAnimatorManager>();
         inputManager = GetComponent<InputManager>();
         playerRigidBody = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
@@ -73,44 +73,17 @@ public class PlayerLocomotion : MonoBehaviour
         
     }
 
-    private void LateUpdate()
-    {
-        StartCoroutine(waiter());
-    }
 
-    private void LongCollider()
+    public void LongCollider()
     {
         capsuleCollider.height = 1.7f;
         capsuleCollider.center = new Vector3(0, 0.922716f, 0);
     }
 
-    private void ShortCollider()
+    public void ShortCollider()
     {
         capsuleCollider.center = new Vector3(0, 1.146192f, 0);
         capsuleCollider.height = 1.3f;
-    }
-
-    IEnumerator waiter()
-    {
-
-        if(isGrounded == false && toggleCollider == false)
-        {
-            LongCollider();
-            toggleCollider = true;
-            yield return new WaitForSeconds(3.0f);
-            toggleCollider = false;
-        }
-        else if(isGrounded == true && toggleCollider == false)
-        {
-            ShortCollider();
-            toggleCollider = true;
-            yield return new WaitForSeconds(0.1f);
-            toggleCollider = false;
-        }
-
-
-
-        //Debug.Log("IS this even working?");
     }
 
 
@@ -261,7 +234,7 @@ public class PlayerLocomotion : MonoBehaviour
             {
                 if(inAirTimer > 0.5f)
                 {
-                    animatorManager.PlayTargetAnimation("Land", true);
+                    animatorManager.PlayTargetAnimation("Landing", true);
                     inAirTimer = 0;
 
                 }

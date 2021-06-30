@@ -10,11 +10,11 @@ public class PlayerStats : CharacterStats
     float lerpSpeed;
     public float lerpValue = 0.00015f;
 
-    private AnimatorManager animatorManager;
+    private PlayerAnimatorManager animatorManager;
 
     private void Awake()
     {
-        animatorManager = GetComponentInChildren<AnimatorManager>();
+        animatorManager = GetComponentInChildren<PlayerAnimatorManager>();
     }
 
     private void Start()

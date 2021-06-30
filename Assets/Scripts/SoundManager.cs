@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource slash_01;
     public AudioSource slash_02;
     public AudioSource electric_effect_01;
+    public AudioSource wall_hit_01;
 
     public void PlaySound(AudioSource audio)
     {

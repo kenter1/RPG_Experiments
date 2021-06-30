@@ -6,7 +6,7 @@ using System;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private AnimatorManager animatorManager;
+    private PlayerAnimatorManager animatorManager;
     public WeaponSlotManager weaponSlotManager;
    
     private ApplyEffect applyEffect;
@@ -37,7 +37,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Awake()
     {
-        animatorManager = GetComponent<AnimatorManager>();
+        animatorManager = GetComponent<PlayerAnimatorManager>();
         backslotHolder = GameObject.Find("Item_SwordHolder");
         sheatheHolder = GameObject.Find("Item_SwordSheath");
         uIManager = FindObjectOfType<UIManager>();

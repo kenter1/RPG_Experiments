@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using EasyBuildSystem.Addons;
+
 
 public class InputManager : MonoBehaviour
 {
+    
+    //private NavMeshSurface navMeshSurface;
     private StatusUI statusUI;
     private BuildInput_Custom buildInput_Custom;
     private UserControl playerControls;
     private PlayerLocomotion playerLocomotion;
-    private AnimatorManager animatorManager;
+    private PlayerAnimatorManager animatorManager;
     private PlayerAttacker playerAttacker;
     private PlayerInventory playerInventory;
     private PlayerManager playerManager;
@@ -16,6 +21,7 @@ public class InputManager : MonoBehaviour
     private UIManager uiManager;
     private CameraManager cameraManager;
     private ApplyEffect applyEffect;
+    private AddonNavMesh addonNavMesh;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -62,9 +68,10 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
+        addonNavMesh = FindObjectOfType<AddonNavMesh>();
         statusUI = FindObjectOfType<StatusUI>();
         weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
-        animatorManager = GetComponent<AnimatorManager>();
+        animatorManager = GetComponent<PlayerAnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
         playerAttacker = GetComponent<PlayerAttacker>();
         playerInventory = GetComponent<PlayerInventory>();
@@ -73,6 +80,8 @@ public class InputManager : MonoBehaviour
         cameraManager = FindObjectOfType<CameraManager>();
         applyEffect = GetComponent<ApplyEffect>();
         buildInput_Custom = FindObjectOfType<BuildInput_Custom>();
+        //navMeshSurface = FindObjectOfType<NavMeshSurface>();
+        
     }
 
     private void OnEnable()
@@ -473,6 +482,9 @@ public class InputManager : MonoBehaviour
             else
             {
                 buildInput_Custom.enabled = false;
+                Debug.Log("Rebuilding Navmesh");
+        
+                //navMeshSurface.BuildNavMesh();
             }
 
 

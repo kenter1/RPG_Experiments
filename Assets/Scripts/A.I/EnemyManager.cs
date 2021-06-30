@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyManager : CharacterManager
 {
-    private EnemyLocomotion enemyLocomotion;
-    private bool isPerformingAction;
+    private EnemyLocomotionManager enemyLocomotion;
+    public bool isPerformingAction;
 
     [Header("A.I Settings")]
     public float detectionRadius = 20;
@@ -15,12 +15,22 @@ public class EnemyManager : CharacterManager
 
     private void Awake()
     {
-        enemyLocomotion = GetComponent<EnemyLocomotion>();
+        enemyLocomotion = GetComponent<EnemyLocomotionManager>();
     }
 
     private void Update()
     {
+        enemyLocomotion.HandleFalling();
+    }
+
+
+    private void FixedUpdate()
+    {
+        
         HandleCurrentAction();
+        
+
+
     }
 
     private void HandleCurrentAction()
@@ -29,6 +39,11 @@ public class EnemyManager : CharacterManager
         {
             enemyLocomotion.HandleDetection();
         }
+        else
+        {
+            enemyLocomotion.HandleMoveToTarget();
+        }
+
     }
 
 }

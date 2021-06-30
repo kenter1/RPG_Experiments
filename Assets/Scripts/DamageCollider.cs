@@ -51,5 +51,15 @@ public class DamageCollider : MonoBehaviour
                 enemyStats.TakeDamage(currentWeaponDamage, heavy);
             }
         }
+
+        if(collision.tag == "DestroyableBuilding")
+        {
+            WallBuilding wallBuilding = collision.GetComponent<WallBuilding>();
+
+            if(wallBuilding != null)
+            {
+                wallBuilding.TakeDamage(currentWeaponDamage / 4);
+            }
+        }
     }
 }
