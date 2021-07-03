@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BuildingItem : MonoBehaviour
 {
-    private int healthLevel;
-    private Rigidbody rigidBody;
+    public int healthLevel = 10;
+    public int maxHealth;
+    public int currentHealth;
+
 
     private void Awake()
     {

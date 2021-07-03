@@ -31,7 +31,7 @@ public class EnemyStats : CharacterStats
     {
         currentHealth = currentHealth - damage;
 
-        if (currentHealth <= 0 && !isDead)
+        if (currentHealth <= 0)
         {
             isDead = true;
             currentHealth = 0;
@@ -49,7 +49,8 @@ public class EnemyStats : CharacterStats
                 soundManager.PlaySound(soundManager.sword_slice_meat_01);
             }
             
-            animator.Play("NPC_Damage_01");
+            animator.Play("Damage_01");
         }
     }
+
 }

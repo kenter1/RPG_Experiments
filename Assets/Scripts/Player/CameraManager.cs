@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    public float distanceCameraFromLockOnTarget;
+    public float newLockedPositionValue;
     private InputManager inputManager;
     private PlayerManager playerManager;
 
@@ -321,9 +323,14 @@ public class CameraManager : MonoBehaviour
         Vector3 velocity = Vector3.zero;
         Vector3 newLockedPosition = new Vector3(0, lockedPivotPosition);
         Vector3 newUnlockedPosition = new Vector3(0, unlockedPivotPosition);
+        
 
-        if(currentLockOnTarget != null)
+        if (currentLockOnTarget != null)
         {
+            distanceCameraFromLockOnTarget = Vector3.Distance(cameraPivot.transform.position, currentLockOnTarget.transform.position);
+            newLockedPositionValue = Mathf.Max((distanceCameraFromLockOnTarget / lockedPivotPosition), 1.5f);
+
+            newLockedPosition = new Vector3(0, newLockedPositionValue);
             cameraPivot.transform.localPosition = Vector3.SmoothDamp(cameraPivot.transform.localPosition, newLockedPosition, ref velocity, Time.deltaTime);
         }
         else

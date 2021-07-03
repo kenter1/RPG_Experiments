@@ -195,11 +195,11 @@ public class PlayerInventory : MonoBehaviour
 
                 if(slot == 0)
                 {
-                    animatorManager.PlayTargetAnimation("Draw_Back_Sword_01", true, true);
+                    animatorManager.PlayTargetAnimation("Draw_Back_Sword_01", false, false);
                 }
                 else if(slot == 1)
                 {
-                    animatorManager.PlayTargetAnimation("Draw_Side_Sword_01", true, true);
+                    animatorManager.PlayTargetAnimation("Draw_Side_Sword_01", false, false);
                 }
 
                 //Equip weapon

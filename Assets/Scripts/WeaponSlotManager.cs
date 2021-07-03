@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WeaponSlotManager : MonoBehaviour
 {
+    private PlayerManager playerManager;
+
     private WeaponHolderSlot leftHandSlot;
     public WeaponHolderSlot rightHandSlot;
 
@@ -27,6 +29,7 @@ public class WeaponSlotManager : MonoBehaviour
         quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
         playerStats = GetComponent<PlayerStats>();
         inputManager = GetComponentInParent<InputManager>();
+        playerManager = GetComponentInParent<PlayerManager>();
 
         WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
         foreach(WeaponHolderSlot weaponSlot in weaponHolderSlots)
@@ -84,7 +87,6 @@ public class WeaponSlotManager : MonoBehaviour
             rightHandSlot.LoadWeaponModel(weaponItem);
             LoadRightWeaponDamageCollider();
             //quickSlotsUI.UpdateWeaponQuickSlotsUI(weaponItem, 1);
-
         }
     }
 
@@ -99,33 +101,39 @@ public class WeaponSlotManager : MonoBehaviour
         rightHandDamageCollider = rightHandSlot.currentWeaponModel.GetComponentInChildren<DamageCollider>();
     }
 
-    public void OpenRightDamageCollider()
+    public void OpenDamageCollider()
     {
         attackingFlag = true;
-        rightHandDamageCollider.EnableDamageCollider();
+        if (playerManager.isUsingRightHand)
+        {
+            rightHandDamageCollider.EnableDamageCollider();
+        }
+        else if (playerManager.isUsingLeftHand)
+        {
+            leftHandDamageCollider.EnableDamageCollider();
+        }
+        
+        
     }
 
-    public void OpenLeftDamageCollider()
-    {
-        attackingFlag = true;
-        leftHandDamageCollider.EnableDamageCollider();
-    }
 
-    public void CloseRightDamageCollider()
+    public void CloseDamageCollider()
     {
         if(rightHandDamageCollider != null)
         {
             rightHandDamageCollider.DisableDamageCollider();
-            attackingFlag = false;
         }
 
+        if (leftHandDamageCollider != null)
+        {
+            leftHandDamageCollider.DisableDamageCollider();
+        }
+
+
+        attackingFlag = false;
+
     }
 
-    public void CloseLeftDamageCollider()
-    {
-        leftHandDamageCollider.DisableDamageCollider();
-        attackingFlag = false;
-    }
     #endregion
 
     #region Handle Weapon's Stamina Drainage

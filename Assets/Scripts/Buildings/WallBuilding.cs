@@ -7,9 +7,6 @@ public class WallBuilding : BuildingItem
 {
 
     private CoroutineManager coroutineManager;
-    public int healthLevel = 10;
-    private int maxHealth;
-    public int currentHealth;
     private SoundManager soundManager;
 
     private int SetMaxHealthFromHealthLevel()

@@ -6,6 +6,7 @@ public class PlayerStats : CharacterStats
 {
     public HealthBar healthBar;
     public HealthBar staminaBar;
+    private SoundManager soundManager;
 
     float lerpSpeed;
     public float lerpValue = 0.00015f;
@@ -14,6 +15,7 @@ public class PlayerStats : CharacterStats
 
     private void Awake()
     {
+        soundManager = FindObjectOfType<SoundManager>();
         animatorManager = GetComponentInChildren<PlayerAnimatorManager>();
     }
 
@@ -63,8 +65,8 @@ public class PlayerStats : CharacterStats
     public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
-
-        if(currentHealth <= 0)
+        soundManager.PlaySound(soundManager.sword_slice_meat_01);
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
             animatorManager.PlayTargetAnimation("Death_01", true, true);
